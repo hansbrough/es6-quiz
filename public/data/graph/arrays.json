@@ -1,0 +1,37 @@
+{
+  "meta":{
+    "graph_id":"js-arrays-1"
+  },
+  "module_array":{
+    "title":"JS Array Concepts",
+    "questions": [
+      {"id":"array_1", "next":"array_2"},
+      {"id":"array_2", "next":"array_3"},
+      {"id":"array_3", "next":"array_4"},
+      {"id":"array_4", "next":"array_5"},
+      {"id":"array_5", "next":"array_6"},
+      {"id":"array_6", "next":"array_7"},
+      {"id":"array_7", "next":"array_8"},
+      {"id":"array_8", "next":"array_9"},
+      {"id":"array_9", "next":"array_10"},
+      {"id":"array_10", "next":"array_11"},
+      {"id":"array_11", "next":"array_12"},
+      {"id":"array_12", "next":"array_13"},
+      {"id":"array_13", "next":"array_14"},
+      {"id":"array_14", "next":"array_15"},
+      {"id":"array_15", "next":"array_16"},
+      {"id":"array_16", "next":"array_17"},
+      {"id":"array_17", "next":"array_18"},
+      {"id":"array_18", "next":"array_19"},
+      {"id":"array_19", "next":"array_20"},
+      {"id":"array_20"}
+    ],
+    "next":"module_final"
+  },
+  "module_final":{
+    "title":"What's Next",
+    "questions": [
+      { "id":"quiz_results"}
+    ]
+  }
+}
