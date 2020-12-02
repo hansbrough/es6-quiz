@@ -3,7 +3,9 @@
 */
 import React, { useEffect, useState } from 'react';
 import DecisionTree from 'question-tree-core';
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from 'react-markdown';
+
+import Summary from './Summary';
 
 const GraphUI = ({graph_path, question_set_path, intro_text='Introduction...'}) => {
   const [decisionTreeInitializing, setDecisionTreeInitializing] = useState();
@@ -102,12 +104,16 @@ const GraphUI = ({graph_path, question_set_path, intro_text='Introduction...'}) 
           )}
 
           {isFinalModule &&
-            <div style={{marginBottom:"1rem",marginTop:"1rem"}}>You got <b>{correctResponses.length}</b> out of <b>{correctResponses.length + inCorrectResponses.length}</b> questions correct.</div>
+            <Summary correctResponses={correctResponses} inCorrectResponses={inCorrectResponses} />
           }
         </div>
       }
-      <button onClick={handlePrevClick} disabled={!DecisionTree.hasPreviousQuestion()}>Prev</button>
-      <button onClick={handleNextClick} disabled={!displayNextBtn}>Next</button>
+      {!isFinalModule &&
+        <>
+        <button onClick={handlePrevClick} disabled={!DecisionTree.hasPreviousQuestion()}>Prev</button>
+        <button onClick={handleNextClick} disabled={!displayNextBtn}>Next</button>
+        </>
+      }
     </div>
   );
 };

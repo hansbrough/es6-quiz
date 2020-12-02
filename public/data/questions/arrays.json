@@ -2,10 +2,10 @@
   "array_1":{
     "title":"What is the correct `concat()` syntax to combine:  \n  \n`const a = ['d', 'e', 'c'];`  \n`const b = ['d', 'e', 'f'];`",
     "labels":[
-      {"title":"`const c = concat(a,b)`", "qid":"1001"},
+      {"title":"`const c = concat(a,b)`", "qid":"1001", "topics":["syntax"]},
       {"title":"`const c = a.concat(b)`", "qid":"1002"},
-      {"title":"`const c = Array.concat(a,b)`", "qid":"1003"},
-      {"title":"None of the above", "qid":"1000", "next":"array_31"}
+      {"title":"`const c = Array.concat(a,b)` because `concat` is a static method of Array.", "qid":"1003", "topics":["syntax","static"]},
+      {"title":"None of the above", "qid":"1000"}
     ],
     "actual":"1002",
     "category":"quiz",
@@ -15,10 +15,10 @@
   "array_2":{
     "title":"What is the expected value of c:  \n  \n`const a = ['d', 'e', 'c'];`  \n`const b = ['d', 'e', 'f'];`  \n`const c = a.concat(b);`",
     "labels":[
-      {"title":"No output. the const a array is changed in place.", "qid":"1004"},
-      {"title":"`['d', 'e', 'c','f']`", "qid":"1005"},
-      {"title":"`['d', 'e', 'c', 'd', 'e', 'f']`", "qid":"111"},
-      {"title":"None of the above - the syntax isn't used correctly.", "qid":"1007"}
+      {"title":"No output. the `const a` array is changed in place.", "qid":"1004","topics":["return","mutation"]},
+      {"title":"`['d', 'e', 'c','f']`", "qid":"1005","topics":["return"]},
+      {"title":"`['d', 'e', 'c', 'd', 'e', 'f']`", "qid":"1006"},
+      {"title":"None of the above - the syntax isn't used correctly.", "qid":"1007","topics":["syntax"]}
     ],
     "actual":"1006",
     "category":"quiz",
@@ -28,8 +28,8 @@
   "array_3":{
     "title":"What is the final value of `numbers`?   \n  \n`const num1 = [[1]];`  \n`const num2 = [2, [3]];`  \n`const numbers = num1.concat(num2);`  \n`num1[0].push(4);`",
     "labels":[
-      {"title":"`[4, [1], 2, [3]]`", "qid":"1008"},
-      {"title":"`[[1], 2, [3]]`", "qid":"1009"},
+      {"title":"`[4, [1], 2, [3]]`", "qid":"1008","topics":["reference"]},
+      {"title":"`[[1], 2, [3]]`", "qid":"1009","topics":["reference"]},
       {"title":"`[[1, 4], 2, [3]]`", "qid":"1010"},
       {"title":"`[[4], 2, [3]]`", "qid":"1011"}
     ],
@@ -41,10 +41,10 @@
   "array_4":{
     "title":"Which is a valid way to test whether all elements in the array are less than 10?  \n  \n`const a = [1,2,3,4,5]`",
     "labels":[
-      {"title":"`Array.every(a, x => x < 10)`", "qid":"1012"},
+      {"title":"`Array.every(a, x => x < 10)` because `every` is a static method of Array.", "qid":"1012","topics":["static"]},
       {"title":"`a.every(x => x < 10)`", "qid":"1013"},
-      {"title":"`a.filter(x => x < 10)`", "qid":"1014"},
-      {"title":"`a.includes(x => x < 10)`", "qid":"1015"}
+      {"title":"`a.filter(x => x < 10)`", "qid":"1014","topics":["different"]},
+      {"title":"`a.includes(x => x < 10)`", "qid":"1015","topics":["different"]}
     ],
     "actual":"1013",
     "category":"quiz",
@@ -52,11 +52,11 @@
     "type":"radio"
   },
   "array_5":{
-    "title":"Which of the below is a valid way to find words greater than 6 characters?  \n  \n`const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];`",
+    "title":"Which of the below is a valid way to find all words greater than 6 characters?  \n  \n`const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];`",
     "labels":[
-      {"title":"`words.filter(x => x.length > 6)`", "qid":"1016"},
+      {"title":"`words.some(x => x.length > 6)`", "qid":"1016","topics":["different"]},
       {"title":"`const a = words.filter(word => word > 6)`", "qid":"1017"},
-      {"title":"`words.find( word => word.length > 6)`", "qid":"1018"},
+      {"title":"`words.find( word => word.length > 6)`", "qid":"1018","topics":["different"]},
       {"title":"`const a = words.filter(x => x.length > 6)`", "qid":"1019"}
     ],
     "actual":"1019",
@@ -68,9 +68,9 @@
     "title":"How to best get the first item greater than 10 in  \n  \n`const a = [5, 12, 8, 130, 44];`",
     "labels":[
       {"title":"`const b = a.find(x => x > 10)`", "qid":"1020"},
-      {"title":"`const b = a.filter(x => x > 10)[0]`", "qid":"1021"},
-      {"title":"`const b = a.findIndex(x => x > 10)`  \n  \n`const c = a[b]`", "qid":"1022"},
-      {"title":"`const b = a.indexOf(x => x > 10)`", "qid":"1023"}
+      {"title":"`const b = a.filter(x => x > 10)[0]`", "qid":"1021","topics":["different"]},
+      {"title":"`const b = a.findIndex(x => x > 10)`  \n  \n`const c = a[b]`", "qid":"1022","topics":["intent"]},
+      {"title":"`const b = a.indexOf(x => x > 10)`", "qid":"1023","topics":["different"]}
     ],
     "actual":"1020",
     "category":"quiz",
@@ -80,10 +80,10 @@
   "array_7":{
     "title":"What is the return value of  \n  \n`const a = [1, 5, 4, 8, 3]`  \n`a.findIndex(x => x > 10)`",
     "labels":[
-      {"title":"`undefined` because `findIndex()` doesn't use a testing function.", "qid":"1024"},
-      {"title":"`[]` because no match is found and a new, empty array is returned instead of modifying the original.", "qid":"1025"},
+      {"title":"`undefined` because `findIndex()` doesn't use a testing function.", "qid":"1024","topics":["syntax"]},
+      {"title":"`[]` because no match is found and a new, empty array is returned instead of modifying the original.", "qid":"1025","topics":["return"]},
       {"title":"`-1` because no matching index was found.", "qid":"1026"},
-      {"title":"`null`", "qid":"1027"}
+      {"title":"`null` because no matching index was found.", "qid":"1027","topics":["return"]}
     ],
     "actual":"1026",
     "category":"quiz",
@@ -91,12 +91,12 @@
     "type":"radio"
   },
   "array_8":{
-    "title":"What's the best way to get the index of the first item greater than 10 in  \n  \n`const a = [5, 12, 8, 130, 44];`",
+    "title":"What's the best way to get the *index* of the first item greater than 10 in  \n  \n`const a = [5, 12, 8, 130, 44];`",
     "labels":[
       {"title":"`const b = a.findIndex(x => x > 10)`  \n  \n`const c = a[b]`", "qid":"1022"},
-      {"title":"`const b = a.indexOf(x => x > 10)`", "qid":"1023"},
+      {"title":"`const b = a.indexOf(x => x > 10)`", "qid":"1023","topics":["syntax"]},
       {"title":"`const b = a.findIndex(x => x > 10)`", "qid":"1028"},
-      {"title":"`const b = a.find(x => x > 10)`", "qid":"1020"}
+      {"title":"`const b = a.find(x => x > 10)`", "qid":"1020","topics":["different"]}
     ],
     "actual":"1028",
     "category":"quiz",
@@ -106,7 +106,7 @@
   "array_9":{
     "title":"What's the output of  \n`const a = [1, 2, [3, 4, [5, 6]]].flat();`",
     "labels":[
-      {"title":"`[1, 2, 3, 4, 5, 6]` because all nested arrays are brought to the same level", "qid":"1029"},
+      {"title":"`[1, 2, 3, 4, 5, 6]` because all nested arrays are brought to the same level", "qid":"1029","topics":["return"]},
       {"title":"`Uncaught TypeError` because it is not an array method.", "qid":"1030"},
       {"title":"`[1, 2, 3, 4, [5], [6]]` because flat() only de-nests 1 level at a time.", "qid":"1031"},
       {"title":"`[1, 2, 3, 4, [5, 6]]` because flat() only de-nests 1 level at a time.", "qid":"1032"}
@@ -117,12 +117,12 @@
     "type":"radio"
   },
   "array_10":{
-    "title":"What is the best method to execute a function once for each item in an array?",
+    "title":"What is the best method to execute a function once for each item in an array (without a return value like a new array)?",
     "labels":[
-      {"title":"`forEach()`", "qid":"1033"},
-      {"title":"`map()`", "qid":"1034"},
-      {"title":"`reduce()`", "qid":"1035"},
-      {"title":"`filter()`", "qid":"1036"}
+      {"title":"`forEach()`", "qid":"1033", "next":"array_48"},
+      {"title":"`map()`", "qid":"1034", "topics":["return"]},
+      {"title":"`reduce()`", "qid":"1035", "topics":["return"]},
+      {"title":"`filter()`", "qid":"1036", "topics":["return"]}
     ],
     "actual":"1033",
     "category":"quiz",
@@ -132,8 +132,8 @@
   "array_11":{
     "title":"What is the expected value of `a` ?  \n  \n`var a = [1, 2, 3, 4].forEach(x => x+1).join('-');`",
     "labels":[
-      {"title":"The string `2-3-4-5` because `forEach()` increments the array values.", "qid":"1037"},
-      {"title":"The string `1-2-3-4` because `forEach()` doesn't change the original array.", "qid":"1038"},
+      {"title":"The string `2-3-4-5` because `forEach()` increments the array values.", "qid":"1037", "topics":["mutation"]},
+      {"title":"The string `1-2-3-4` because `forEach()` doesn't change the original array.", "qid":"1038", "topics":["return"]},
       {"title":"`Uncaught TypeError` because the `forEach()` method is not chainable.", "qid":"1039"},
       {"title":"None of the above", "qid":"1000"}
     ],
@@ -277,12 +277,12 @@
     "labels":[
       {"title":"`5` because `push()` returns the new length of the array.", "qid":"1079"},
       {"title":"`5` because `push()` returns val of the new item(s) added to the array", "qid":"1080"},
-      {"title":"`[1,2,3,4,5]` because `push` doesnt mutate the original array - it returns a new array after the item(s) have been added to the end.", "qid":"1081"},
-      {"title":"`[5,1,2,3,4]` because `push` doesnt mutate the original array - it returns a new array after the item(s) have been added to the beginning.", "qid":"1082"}
+      {"title":"`[1,2,3,4,5]` because `push` doesn't mutate the original array - it returns a new array after the item(s) have been added to the end.", "qid":"1081"},
+      {"title":"`[5,1,2,3,4]` because `push` doesn't mutate the original array - it returns a new array after the item(s) have been added to the beginning.", "qid":"1082"}
     ],
-    "actual":"1000",
+    "actual":"1079",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"push",
     "type":"radio"
   },
   "array_23":{
@@ -304,7 +304,7 @@
       {"title":"push, pop, reduce, filter, map", "qid":"1087"},
       {"title":"push, pop, shift, unshift", "qid":"1088"},
       {"title":"push, pop, shift, unshift, slice, reverse", "qid":"1089"},
-      {"title":"push, pop, shift, unshift, reverse, sort, splice", "qid":"1090"}
+      {"title":"push, pop, shift, unshift, reverse, sort, splice, fill", "qid":"1090"}
     ],
     "actual":"1090",
     "category":"quiz",
@@ -397,20 +397,293 @@
       {"title":"This will result in an error because of missing required method arguments.", "qid":"1116"},
       {"title":"`['angel']` because `splice()` will delete everything from the start index of `1` since the second argument was not included.", "qid":"1117"}
     ],
-    "actual":"1100",
+    "actual":"1117",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"splice",
     "type":"radio"
   },
   "array_32":{
+    "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.splice(1,2)`",
+    "labels":[
+      {"title":"`['angel', 'sturgeon']` because `splice()` starts at index 1 removes 2 items and inserts nothing since a value is not passed.", "qid":"1118"},
+      {"title":"`['angel', 'sturgeon']` because `splice()` deletes everything from index 1 and index 2. nothing is inserted since no value is passed.", "qid":"1119"},
+      {"title":"`['angel', 'clown']` because `splice()` starts and index 1 and removes 2 subsequent entries.", "qid":"1120"},
+      {"title":"`['angel', 'clown', 'mandarin']` because `splice()` starts at index 2 and removed 1 entry.", "qid":"1121"}
+    ],
+    "actual":"1118",
+    "category":"quiz",
+    "criterion":"splice",
+    "type":"radio"
+  },
+  "array_33":{
+    "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.splice(-2,1)`",
+    "labels":[
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `splice()` does not mutate the array.", "qid":"1122"},
+      {"title":"`['angel', 'clown', 'sturgeon']` because `splice()` calculates starting point from end of array with negative integers as an argument. The second arg indicates one item should be removed.", "qid":"1123"},
+      {"title":"`['mandarin', 'sturgeon']` because `splice()` starts at index 1 and moves backward removing 2 items.", "qid":"1124"},
+      {"title":"`Error` is thrown because splice() is does not accept negative numbers.", "qid":"1125"}
+    ],
+    "actual":"1123",
+    "category":"quiz",
+    "criterion":"splice",
+    "type":"radio"
+  },
+  "array_34":{
+    "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.unshift('grouper')`",
+    "labels":[
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `unshift()` does not mutate the original array.", "qid":"1126"},
+      {"title":"`['grouper', 'angel', 'clown', 'mandarin', 'sturgeon']` because a new item is added to the *front* of the array.", "qid":"1127"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon', 'grouper']` because a new item is added to the *back* of the array.", "qid":"1128"},
+      {"title":"`['grouper', 'clown', 'mandarin', 'sturgeon']` because a new item is replaced at the *front* of the array.", "qid":"1129"}
+    ],
+    "actual":"1127",
+    "category":"quiz",
+    "criterion":"unshift",
+    "type":"radio"
+  },
+  "array_35":{
+    "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.unshift('grouper', 'star')`",
+    "labels":[
+      {"title":"`['grouper', 'star','angel', 'clown', 'mandarin', 'sturgeon'];` because if multiple elements are passed as parameters, they are inserted in the exact same order.", "qid":"1130"},
+      {"title":"`['star', 'grouper', 'angel', 'clown', 'mandarin', 'sturgeon'];` because if multiple elements are passed as parameters, they are inserted at the beginning one at a time.", "qid":"1131"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `unshift()` doesn't mutate the original array.", "qid":"1132", "next":"array_24"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because 'grouper' & 'star' don't exist in the array so they can't be unshifted (removed).", "qid":"1133"}
+    ],
+    "actual":"1130",
+    "category":"quiz",
+    "criterion":"unshift",
+    "type":"radio"
+  },
+  "array_36":{
+    "title":"What is the value of `const a` given: `var a = ['angel', 'clown', 'mandarin', 'sturgeon'].unshift('grouper', 'star');`",
+    "labels":[
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because 'grouper' & 'star' don't exist in the array so they can't be unshifted (removed).", "qid":"1133"},
+      {"title":"`['grouper', 'star', 'angel', 'clown', 'mandarin', 'sturgeon']` because unshift adds items to the front of an array.", "qid":"1134"},
+      {"title":"`6` because unshift() returns the length of the mutated array after adding new elements.", "qid":"1135"},
+      {"title":"`4` because unshift() returns the length of the mutated array after removing new elements.", "qid":"1136"}
+    ],
+    "actual":"1135",
+    "category":"quiz",
+    "criterion":"unshift",
+    "type":"radio"
+  },
+  "array_37":{
+    "title":"What is the output of this expression: `[2, 5, 8, 1, 4].some(x => x > 10);` ?",
+    "labels":[
+      {"title":"`[]` because none of the members pass the testing function.", "qid":"1137"},
+      {"title":"`undefined` because none of the members pass the testing function.", "qid":"1138"},
+      {"title":"`false` none of the array members pass the testing function.", "qid":"1139"},
+      {"title":"A syntax error is thrown. correct usage is `Array.some([2, 5, 8, 1, 4], x => x > 10)`", "qid":"1140"}
+    ],
+    "actual":"1139",
+    "category":"quiz",
+    "criterion":"some",
+    "type":"radio"
+  },
+  "array_38":{
+    "title":"What is the return value of: `['mandarin', 'angel', 'sturgeon', 'clown'].sort()`?",
+    "labels":[
+      {"title":"There is no return value. The array is mutated in place.", "qid":"1141"},
+      {"title":"An error is thrown because a compare function is required as an argument.", "qid":"1142"},
+      {"title":"`['mandarin', 'angel', 'sturgeon', 'clown']` because the original array is always returned.", "qid":"1143"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `sort()` mutates the original array *and* returns the sorted array.", "qid":"1144"}
+    ],
+    "actual":"1144",
+    "category":"quiz",
+    "criterion":"sort",
+    "type":"radio"
+  },
+  "array_39":{
+    "title":"Given 2 arguments `a` and `b` - what value should the compare function of the `sort()` method return?",
+    "labels":[
+      {"title":"The greater of arguments `a` or `b`", "qid":"1145"},
+      {"title":"`true` or `false` depending on whether `a` is larger than `b`", "qid":"1146"},
+      {"title":"Either -1, 1, or 0 depending if `a` is less than, greater than or equal to `b`", "qid":"1147"},
+      {"title":"`true` or `false` depending on whether `b` is larger than `a` or `-1` if they are equal.", "qid":"1148"}
+    ],
+    "actual":"1147",
+    "category":"quiz",
+    "criterion":"sort",
+    "type":"radio"
+  },
+  "array_40":{
+    "title":"Which array methods can be called on 'array-like' objects e.g. on a function's arguments",
+    "labels":[
+      {"title":"", "qid":"1149"},
+      {"title":"", "qid":"1150"},
+      {"title":"", "qid":"1151"},
+      {"title":"reverse, fill", "qid":"1152"}
+    ],
+    "actual":"1152",
+    "category":"quiz",
+    "criterion":"array generics",
+    "type":"radio"
+  },
+  "array_41":{
+    "title":"What is the return value of: `['mandarin', 'angel', 'sturgeon', 'clown'].reverse()`?",
+    "labels":[
+      {"title":"There is no return value. The array is mutated in place.", "qid":"1141","topics":["return"]},
+      {"title":"`['mandarin', 'angel', 'sturgeon', 'clown']` because the original array is always returned.", "qid":"1143","topics":["return"]},
+      {"title":"An Array iterator which in turn can be used to get the individual items.", "qid":"1153","topics":["return"]},
+      {"title":"`['clown', 'sturgeon', 'angel', 'mandarin']` because `reverse()` mutates the original array *and* returns a reference to the array.", "qid":"1154"}
+    ],
+    "actual":"1154",
+    "category":"quiz",
+    "criterion":"reverse",
+    "type":"radio"
+  },
+  "array_42":{
+    "title":"What is the return value of `['nice cat','fat cat','smelly cat'].fill('dog')`?",
+    "labels":[
+      {"title":"There is no return value. The array is mutated in place.", "qid":"1141","topics":["return"]},
+      {"title":"`['black cat','fat cat','smelly cat']` because the original array is always returned.", "qid":"1155","topics":["return"]},
+      {"title":"`['dog','dog','dog']` because `fill()` w/out start or end arguments will replace all of the existing members with the given value.", "qid":"1156"},
+      {"title":"An Array iterator which in turn can be used to get the individual items.", "qid":"1153","topics":["return"]}
+    ],
+    "actual":"1156",
+    "category":"quiz",
+    "criterion":"fill",
+    "type":"radio"
+  },
+  "array_43":{
+    "title":"What is the return value of `['nice cat','fat cat','smelly cat'].fill('dog', 1)`?",
+    "labels":[
+      {"title":"`['nice cat', 'dog', 'dog']` because `fill` mutates the existing array by replacing all the items *from* index 1 with the given value and returns a reference to the array.", "qid":"1157"},
+      {"title":"`['nice cat','dog','smelly cat']` because `fill` replaces the item *at* index 1 with the given value and returns a reference to the array.", "qid":"1158","topics":["operation"]},
+      {"title":"There is no return value. The array is mutated in place.", "qid":"1141", "topics":["return"]},
+      {"title":"An Array iterator which in turn can be used to get the individual items.", "qid":"1153","topics":["intent"]}
+    ],
+    "actual":"1157",
+    "category":"quiz",
+    "criterion":"fill",
+    "type":"radio"
+  },
+  "array_44":{
+    "title":"What is the value of `a` given `const a = ['a','b','c','d','e']`  \n`a.fill('z', 2, -1)`",
+    "labels":[
+      {"title":"`['a','b','c','d','e']` because `fill` is not a mutator method the original array is not changed.", "qid":"1159","topics":["mutation"]},
+      {"title":"`['a','b','z','z','e']` because `fill` starts at index 2 and ends 1 index away from the array's length.", "qid":"1160"},
+      {"title":"`['a','b','z','d','z']` because `fill` replaces the item at index 2 and the item  1 index away from the array's length.", "qid":"1161","topics":["operaction"]},
+      {"title":"`5` because it is the length of the array after the fill makes changes.", "qid":"1162","topics":["return"]}
+    ],
+    "actual":"1160",
+    "category":"quiz",
+    "criterion":"fill",
+    "type":"radio"
+  },
+  "array_45":{
+    "title":"What is the value of `a` given: `const a = Array(3).fill(Array(4).fill('cat'))`",
+    "labels":[
+      {"title":"`Uncaught TypeError` because it is not an array method.", "qid":"1030"},
+      {"title":"A 3 by 4 grid of arrays filled with cats.", "qid":"1163"},
+      {"title":"An Array iterator which in turn can be used to get the individual items.", "qid":"1153","topics":["return","intent"]},
+      {"title":"4 top level arrays each with 3 nested arrays who each have a single item - the string 'cat'", "qid":"1164"}
+    ],
+    "actual":"1163",
+    "category":"quiz",
+    "criterion":"fill ",
+    "type":"radio"
+  },
+  "array_46":{
+    "title":"'A method that executes a provided function on each element of an array and returns a single output value.' descibes which of the folllowing methods best?",
+    "labels":[
+      {"title":"`concat()`", "qid":"1165","topics":["different"]},
+      {"title":"`filter()`", "qid":"1166","topics":["different"]},
+      {"title":"`map()`", "qid":"1167","topics":["different"]},
+      {"title":"`reduce()`", "qid":"1168"}
+    ],
+    "actual":"1168",
+    "category":"quiz",
+    "criterion":"reduce",
+    "type":"radio"
+  },
+  "array_47":{
+    "title":"What is the correct `reduce()` method signature?",
+    "labels":[
+      {"title":"`Array.prototype.reduce(arr, accumulator, currentVal)` where `arr` is the array whose items are being reduced.", "qid":"1169","topics":["syntax"]},
+      {"title":"`reduce(accumulator, currentValue, [initialValue])` where `accumulator` is the acculated value previously returned in the last invocation of `reduce`", "qid":"1170","topics":["syntax"]},
+      {"title":"`reduce(callback, [initialValue])` where 'callback' is a function called once per array item and 'initialValue' is optional.", "qid":"1171"},
+      {"title":"`reduce(accumulator, currentindex, [initialValue])` where `accumulator` is the function called on each of the array's items.", "qid":"1172","topics":["syntax"]}
+    ],
+    "actual":"1171",
+    "category":"quiz",
+    "criterion":"reduce",
+    "type":"radio"
+  },
+  "array_48":{
+    "title":"What is the expected value of `x` given: `const x = [1,2,3,4,5].reduce((acc, curr) => acc + curr);`",
+    "labels":[
+      {"title":"`undefined` because there is no return value since `reduce()` mutates the array in place.", "qid":"1173", "topics":["return"]},
+      {"title":"`5` because `reduce()` returns the array length", "qid":"1174","topics":["intent"]},
+      {"title":"`1` because `reduce()` returns the smallest value in an array.", "qid":"1175","topics":["intent"]},
+      {"title":"`15` because `1 + 2 + 3 + 4 + 5 = 15`", "qid":"1176"}
+    ],
+    "actual":"1176",
+    "category":"quiz",
+    "criterion":"reduce",
+    "type":"radio"
+  },
+  "array_49":{
+    "title":"What is the difference between `reduce()` and `reduceRight()` ?",
+    "labels":[
+      {"title":"`reduceRight()` moves larger values to the right side of the target array.", "qid":"1177","topics":["intent"]},
+      {"title":"The `reduce()` method accumulates array items from left to right while the `reduceRight()` method works from right to left.", "qid":"1178"},
+      {"title":"The `reduce()` method does *not* mutate the array while `reduceRight()` *does* mutate the array", "qid":"1179","topics":["intent"]},
+      {"title":"The `reduce()` method is generic and can be called on 'array-like' objects while `reduceRight()` cannot.", "qid":"1180"}
+    ],
+    "actual":"1178",
+    "category":"quiz",
+    "criterion":"reduceRight",
+    "type":"radio"
+  },
+  "array_50":{
+    "title":"What is the expected output of:  \n`[[0, 1], [2, 3], [4, 5]].reduceRight(`  \n&emsp;`(acc, curr) => acc.concat(curr)`  \n`);`",
+    "labels":[
+      {"title":"`[4, 5, 2, 3, 0, 1]` because `reduceRight` starts on the right side of the array and works left for every nested array.", "qid":"1181"},
+      {"title":"`[0, 1, 2, 3, 4, 5]` because larger values are moved to the right side of the array.", "qid":"1182","topics":["intent"]},
+      {"title":"`[5, 4, 3, 2, 1, 0]` because `reduceRight` starts on the right side of the outer and inner arrays and works left.", "qid":"1183","topics":["operation"]},
+      {"title":"No output is expected because `reduceRight()` mutates the original array.", "qid":"1184","topics":["intent","mutation"]}
+    ],
+    "actual":"1181",
+    "category":"quiz",
+    "criterion":"reduceRight",
+    "type":"radio"
+  },
+  "array_51":{
+    "title":"How is the `from()` method invoked on an array-like or iterable object such as:` const f = 'foobar'` ?",
+    "labels":[
+      {"title":"`const x = Array.from(f)` because `from()` is a static method of Array", "qid":"1185"},
+      {"title":"`const x = f.from()` because `from` is available through Array's prototype chain.", "qid":"1186","topics":["static"]},
+      {"title":"`const x = window.from(f)` because `from()` is a method of the global window object.", "qid":"1187","topics":["static"]},
+      {"title":"`const x = from(f)`  because `from()` is a standard built in function.", "qid":"1188","topics":["static"]}
+    ],
+    "actual":"1185",
+    "category":"quiz",
+    "criterion":"from",
+    "type":"radio"
+  },
+  "array_52":{
+    "title":"What is the difference in output between `Array.of(3)` and `Array(3)` ?",
+    "labels":[
+      {"title":"There is not difference. both methods create an empty array with a length of 3.", "qid":"1189","topics":["intent"]},
+      {"title":"`[3]` and `[,,,]` because `Array.of()` creates a new array and populates it with the given arguments vs a new array with a given number of indexes.", "qid":"1190"},
+      {"title":"`[,,,]` and `[3]` because `Array.of()` creates a new array with three empty slots vs an array with a single item of `3`", "qid":"1191", "topics":["intent"]},
+      {"title":"An error is thrown because `of()` is not a static method of Array.", "qid":"1192", "topics":["static"]}
+    ],
+    "actual":"1190",
+    "category":"quiz",
+    "criterion":"of",
+    "type":"radio"
+  },
+  "array_53":{
     "title":"",
     "labels":[
-      {"title":"", "qid":"1100"},
-      {"title":"", "qid":"1100"},
-      {"title":"", "qid":"1100"},
-      {"title":"", "qid":"1100"}
+      {"title":"", "qid":"1200","topics":[]},
+      {"title":"", "qid":"1200"},
+      {"title":"", "qid":"1200", "topics":[]},
+      {"title":"", "qid":"1200", "topics":[]}
     ],
-    "actual":"1100",
+    "actual":"1200",
     "category":"quiz",
     "criterion":"",
     "type":"radio"
@@ -420,5 +693,4 @@
     "type":"summary",
     "qid":"10000"
   }
-
 }
