@@ -2,12 +2,20 @@
   "meta":{
     "graph_id":"1"
   },
-  "module_plantId":{
-    "title":"Plant Identification (Detour/Compound)",
+  "module_objects":{
+    "title":"JS Object Concepts",
     "questions": [
-      {"id":"plantId_1", "next":"plantId_2"},
-      {"id":"plantId_2", "next":"plantId_3"},
-      {"id":"plantId_3"}
+      {"id":"object_1", "next":"object_11"},
+      {"id":"object_2", "next":"object_3"},
+      {"id":"object_3", "next":"object_4"},
+      {"id":"object_4", "next":"object_5"},
+      {"id":"object_5", "next":"object_6"},
+      {"id":"object_6", "next":"object_7"},
+      {"id":"object_7", "next":"object_8"},
+      {"id":"object_8", "next":"object_9"},
+      {"id":"object_9", "next":"object_10"},
+      {"id":"object_10","next":"object_11"},
+      {"id":"object_11"}
     ],
     "next":"module_final"
   },

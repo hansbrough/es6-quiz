@@ -39,12 +39,12 @@
     "type":"radio"
   },
   "array_4":{
-    "title":"Which is a valid way to test whether all elements in the array are less than 10?  \n  \n`const a = [1,2,3,4,5]`",
+    "title":"Which is the simplest way to test whether all elements in the array are less than 10?  \n  \n`const a = [1,2,3,4,5]`",
     "labels":[
       {"title":"`Array.every(a, x => x < 10)` because `every` is a static method of Array.", "qid":"1012","topics":["static"]},
       {"title":"`a.every(x => x < 10)`", "qid":"1013"},
-      {"title":"`a.filter(x => x < 10)`", "qid":"1014","topics":["different"]},
-      {"title":"`a.includes(x => x < 10)`", "qid":"1015","topics":["different"]}
+      {"title":"`a.filter(x => x < 10)`", "qid":"1014","topics":["different"], "next":"array_53"},
+      {"title":"`a.includes(x => x < 10)`", "qid":"1015","topics":["different"], "next":"array_54"}
     ],
     "actual":"1013",
     "category":"quiz",
@@ -54,9 +54,9 @@
   "array_5":{
     "title":"Which of the below is a valid way to find all words greater than 6 characters?  \n  \n`const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];`",
     "labels":[
-      {"title":"`words.some(x => x.length > 6)`", "qid":"1016","topics":["different"]},
+      {"title":"`words.some(x => x.length > 6)`", "qid":"1016","topics":["different"], "next":"array_55"},
       {"title":"`const a = words.filter(word => word > 6)`", "qid":"1017"},
-      {"title":"`words.find( word => word.length > 6)`", "qid":"1018","topics":["different"]},
+      {"title":"`words.find( word => word.length > 6)`", "qid":"1018","topics":["different"], "next":"array_56"},
       {"title":"`const a = words.filter(x => x.length > 6)`", "qid":"1019"}
     ],
     "actual":"1019",
@@ -65,12 +65,12 @@
     "type":"radio"
   },
   "array_6":{
-    "title":"How to best get the first item greater than 10 in  \n  \n`const a = [5, 12, 8, 130, 44];`",
+    "title":"What's the simplest way to get the first item greater than 10 in  \n  \n`const a = [5, 12, 8, 130, 44];`",
     "labels":[
       {"title":"`const b = a.find(x => x > 10)`", "qid":"1020"},
-      {"title":"`const b = a.filter(x => x > 10)[0]`", "qid":"1021","topics":["different"]},
+      {"title":"`const b = a.filter(x => x > 10)[0]`", "qid":"1021","topics":["different"],"next":"array_53"},
       {"title":"`const b = a.findIndex(x => x > 10)`  \n  \n`const c = a[b]`", "qid":"1022","topics":["intent"]},
-      {"title":"`const b = a.indexOf(x => x > 10)`", "qid":"1023","topics":["different"]}
+      {"title":"`const b = a.indexOf(x => x > 10)`", "qid":"1023","topics":["different"], "next":"array_57"}
     ],
     "actual":"1020",
     "category":"quiz",
@@ -96,7 +96,7 @@
       {"title":"`const b = a.findIndex(x => x > 10)`  \n  \n`const c = a[b]`", "qid":"1022"},
       {"title":"`const b = a.indexOf(x => x > 10)`", "qid":"1023","topics":["syntax"]},
       {"title":"`const b = a.findIndex(x => x > 10)`", "qid":"1028"},
-      {"title":"`const b = a.find(x => x > 10)`", "qid":"1020","topics":["different"]}
+      {"title":"`const b = a.find(x => x > 10)`", "qid":"1020","topics":["different"],"next":"array_56"}
     ],
     "actual":"1028",
     "category":"quiz",
@@ -119,10 +119,10 @@
   "array_10":{
     "title":"What is the best method to execute a function once for each item in an array (without a return value like a new array)?",
     "labels":[
-      {"title":"`forEach()`", "qid":"1033", "next":"array_48"},
-      {"title":"`map()`", "qid":"1034", "topics":["return"]},
-      {"title":"`reduce()`", "qid":"1035", "topics":["return"]},
-      {"title":"`filter()`", "qid":"1036", "topics":["return"]}
+      {"title":"`forEach()`", "qid":"1033"},
+      {"title":"`map()`", "qid":"1034", "topics":["different"], "next":"array_58"},
+      {"title":"`reduce()`", "qid":"1035", "topics":["different"], "next":"array_59"},
+      {"title":"`filter()`", "qid":"1036", "topics":["different"], "next":"array_53"}
     ],
     "actual":"1033",
     "category":"quiz",
@@ -143,12 +143,12 @@
     "type":"radio"
   },
   "array_12":{
-    "title":"Given `a = [1, 2, 3];`  \n  \nWhat's the best way to verify `3` is located at the last index of `a`",
+    "title":"Given `a = [1, 2, 3];`  \n  \nWhat's the simplest way to verify `3` is located at the last index of `a`",
     "labels":[
-      {"title":"`a.includes(3, 3)` because it searches for `3` from the 3rd index.", "qid":"1040"},
+      {"title":"`a.includes(3, 3)` because it searches for `3` from the 3rd index.", "qid":"1040", "topics":["hardwired","boundry"]},
       {"title":"`a.includes(3, -1)` because it searches for `3` from the last index.", "qid":"1041"},
-      {"title":"`a.findIndex(a => a === 3) === 2` because this returns a boolean.", "qid":"1042"},
-      {"title":"`var b = a.indexOf(3) === 2;` because `b` will evaluate to `true` or `false`", "qid":"1042"}
+      {"title":"`a.findIndex(a => a === 3) === 2` because this returns a boolean.", "qid":"1042", "topics":["complicated","hardwired"]},
+      {"title":"`var b = a.indexOf(3) === 2;` because `b` will evaluate to `true` or `false`", "qid":"1042", "topics":["hardwired"]}
     ],
     "actual":"1041",
     "category":"quiz",
@@ -158,10 +158,10 @@
   "array_13":{
     "title":"What's the expected console output for:  \n  \n`(function() {`  \n&emsp;`console.log(Array.prototype.includes.call(arguments, 'a'))`  \n`})('a','b','c')`",
     "labels":[
-      {"title":"`Uncaught TypeError` because the `includes()` method can only be applied to arrays.", "qid":"1043"},
+      {"title":"`Uncaught TypeError` because the `includes()` method can only be applied to arrays.", "qid":"1043","topics":["generic"]},
       {"title":"`true` because the `includes()` method is generic and can be applied to 'array-like' objects such as `arguments`", "qid":"1044"},
       {"title":"nothing... the function is never invoked.", "qid":"1045"},
-      {"title":"`'a'` because the argument value is returned.", "qid":"1046"}
+      {"title":"`'a'` because the argument value is returned.", "qid":"1046", "topics":["return"]}
     ],
     "actual":"1044",
     "category":"quiz",
@@ -171,9 +171,9 @@
   "array_14":{
     "title":"Whats the most concise way to check if a `2` exists at the last index of:  \n  \n`const a = [1, 2, 2, 2]`",
     "labels":[
-      {"title":"`a.indexOf(2)` because the method always searches the entire array.", "qid":"1047"},
-      {"title":"`a.findIndex(2, -1)`", "qid":"1048"},
-      {"title":"`a.indexOf(2, a.length)` because this will start a search at the end of the array.", "qid":"1049"},
+      {"title":"`a.indexOf(2)` because the method always searches the entire array.", "qid":"1047", "topics":["operation"]},
+      {"title":"`a.findIndex(2, -1)`", "qid":"1048", "topics":["different"], "next":["array_60"]},
+      {"title":"`a.indexOf(2, a.length)` because this will start a search at the end of the array.", "qid":"1049", "topics":["complicated"]},
       {"title":"`a.indexOf(2, -1)` because this will start a search from the end of the array.", "qid":"1050"}
     ],
     "actual":"1050",
@@ -197,9 +197,9 @@
   "array_16":{
     "title":"What value will `['cat','dog','bird'].keys()` return?",
     "labels":[
-      {"title":"`[0, 1, 2]`", "qid":"1055"},
-      {"title":"`['cat','dog','bird']`", "qid":"1056"},
-      {"title":"A syntax error because the correct usage is `Array.keys(['cat','dog','bird'])`", "qid":"1057"},
+      {"title":"`[0, 1, 2]`", "qid":"1055", "topics":["return"]},
+      {"title":"`['cat','dog','bird']`", "qid":"1056", "topics":["return"]},
+      {"title":"A syntax error because the correct usage is `Array.keys(['cat','dog','bird'])`", "qid":"1057", "topics":["static"]},
       {"title":"An Array iterator which in turn can be used to get the individual keys.", "qid":"1058"}
     ],
     "actual":"1058",
@@ -208,11 +208,11 @@
     "type":"radio"
   },
   "array_17":{
-    "title":"What's the most concise way to get the position of the last item that is a `2` in `const a = [2, 5, 9, 2]`;",
+    "title":"What's the most concise way to get the *position* of the last item that is a `2` in `const a = [2, 5, 9, 2]`;",
     "labels":[
-      {"title":"`a.findIndex(x => x === 2, -1)`", "qid":"1059"},
-      {"title":"`a.indexOf(2, -1)`", "qid":"1060"},
-      {"title":"`a.lastIndexOf(2, -1)` because the second arg triggers a search from the end of an array.", "qid":"1061"},
+      {"title":"`a.findIndex(x => x === 2, -1)`", "qid":"1059", "topics":["different"], "next":"array_60"},
+      {"title":"`a.indexOf(2, -1)`", "qid":"1060", "topics":["complicated"]},
+      {"title":"`a.lastIndexOf(2, -1)` because the second arg triggers a search from the end of an array.", "qid":"1061", "topics":["complicated"]},
       {"title":"`a.lastIndexOf(2)` because `lastIndexOf` automatically starts at the array's end.", "qid":"1062"}
     ],
     "actual":"1062",
@@ -237,8 +237,8 @@
     "title":"What is the expected output of  \n  \n`[1, 4, 9, 16].map(x => x * 2);`",
     "labels":[
       {"title":" an error because `map()` is an Object method not an Array method.", "qid":"1067"},
-      {"title":"`undefined` because `map()` doesn't return anything it updates an array in place.", "qid":"1068"},
-      {"title":"`[1, 4, 9, 16]` because `map()` always returns a copy of the original array.", "qid":"1069"},
+      {"title":"`undefined` because `map()` doesn't return anything it updates an array in place.", "qid":"1068", "topics":["return","mutation"]},
+      {"title":"`[1, 4, 9, 16]` because `map()` always returns a copy of the original array.", "qid":"1069", "topics":["return"]},
       {"title":"`[2, 8, 18, 32]` because `map()` returns a new array after operating on each item.", "qid":"1070"}
     ],
     "actual":"1070",
@@ -250,9 +250,9 @@
     "title":"How can you use `map()` to change the string 'foo' into the array `['f_','o_','o_']`",
     "labels":[
       {"title":"`Array.prototype.map.call('foo', l => l+'_')`", "qid":"1071"},
-      {"title":"`'foo'.map(l => l+'_')`", "qid":"1072"},
-      {"title":"`Array.map('foo', l => l+'_')`", "qid":"1073"},
-      {"title":"`'foo'.prototype.map.call([],  l => l+'_')`", "qid":"1074"}
+      {"title":"`'foo'.map(l => l+'_')`", "qid":"1072", "topics":["generic_syntax"]},
+      {"title":"`Array.map('foo', l => l+'_')`", "qid":"1073", "topics":["generic_syntax"]},
+      {"title":"`'foo'.prototype.map.call([],  l => l+'_')`", "qid":"1074", "topics":["generic_syntax"]}
     ],
     "actual":"1071",
     "category":"quiz",
@@ -263,9 +263,9 @@
     "title":"Given `const a = [1,2,3,4];`  \n  \nand `const b = a.pop()`  \n  \nWhat are the values of `a` and `b`",
     "labels":[
       {"title":"`a = [1,2,3]; b = 4;` because `pop()` mutates the array and returns last item.", "qid":"1075"},
-      {"title":"`a = [1,2,3,4]; b = [4];` because `pop()` returns a new array with the last last item.", "qid":"1076"},
-      {"title":"`a = [1,2,3,4]; b = 1;` because `pop()` returns the first item.", "qid":"1077"},
-      {"title":"`a = [2,3,4]; b = 1;` because `pop()` mutates the array and returns first item.", "qid":"1078"}
+      {"title":"`a = [1,2,3,4]; b = [4];` because `pop()` returns a new array with the last last item.", "qid":"1076", "topics":["return"]},
+      {"title":"`a = [1,2,3,4]; b = 1;` because `pop()` returns the first item.", "qid":"1077", "topics":["return","mutation"]},
+      {"title":"`a = [2,3,4]; b = 1;` because `pop()` mutates the array and returns first item.", "qid":"1078", "topics":["return"], "next":"array_66"}
     ],
     "actual":"1075",
     "category":"quiz",
@@ -276,9 +276,9 @@
     "title":"Given `const a = [1,2,3,4].push(5)`  \n  \nWhat is the value of `a`?",
     "labels":[
       {"title":"`5` because `push()` returns the new length of the array.", "qid":"1079"},
-      {"title":"`5` because `push()` returns val of the new item(s) added to the array", "qid":"1080"},
-      {"title":"`[1,2,3,4,5]` because `push` doesn't mutate the original array - it returns a new array after the item(s) have been added to the end.", "qid":"1081"},
-      {"title":"`[5,1,2,3,4]` because `push` doesn't mutate the original array - it returns a new array after the item(s) have been added to the beginning.", "qid":"1082"}
+      {"title":"`5` because `push()` returns val of the new item(s) added to the array", "qid":"1080","topics":["return"]},
+      {"title":"`[1,2,3,4,5]` because `push` doesn't mutate the original array - it returns a new array after the item(s) have been added to the end.", "qid":"1081", "topics":["return","mutation"]},
+      {"title":"`[5,1,2,3,4]` because `push` doesn't mutate the original array - it returns a new array after the item(s) have been added to the beginning.", "qid":"1082", "topics":["return","mutation"]}
     ],
     "actual":"1079",
     "category":"quiz",
@@ -288,10 +288,10 @@
   "array_23":{
     "title":"Given `const a = [1,2,3,4];`  \n  \n`a.push(5)`  \n  \nWhat is the value of `a`?",
     "labels":[
-      {"title":"`[1,2,3,4,,]` because `push()` adds a value and a given index and no value was specified.", "qid":"1083"},
-      {"title":"`[1,2,3,4]` because `push()` doesn't mutate the original array.", "qid":"1084"},
+      {"title":"`[1,2,3,4,,]` because `push()` adds a value at a given index and no value was specified.", "qid":"1083","topics":["operation"]},
+      {"title":"`[1,2,3,4]` because `push()` doesn't mutate the original array.", "qid":"1084","topics":["mutation"], "next":"array_64"},
       {"title":"`[1,2,3,4,5]` because `push()` adds items to the *end* of an array.", "qid":"1085"},
-      {"title":"`[5,1,2,3,4]` because `push()` adds items to the *beginning* of an array.", "qid":"1086"}
+      {"title":"`[5,1,2,3,4]` because `push()` adds items to the *beginning* of an array.", "qid":"1086","topics":["operation"], "next":"array_63"}
     ],
     "actual":"1085",
     "category":"quiz",
@@ -308,18 +308,18 @@
     ],
     "actual":"1090",
     "category":"quiz",
-    "criterion":"array mutation",
+    "criterion":"categorization",
     "type":"radio"
   },
   "array_25":{
     "title":"Given `const a = [1, 2, 3, 4];`  \n  \n`const b = a.shift()`  \n  \nWhat are the values of `a` and `b`?",
     "labels":[
       {"title":"`1` and `[2, 3, 4]` because `shift()` mutates the array by removing the first element.", "qid":"1091"},
-      {"title":"`1` and `[1, 2, 3, 4]` because shift does *not* mutate the original array.", "qid":"1092"},
-      {"title":"`4` and `[1, 2, 3]` because `shift()` mutates the array and removes the last element.", "qid":"1093"},
+      {"title":"`1` and `[1, 2, 3, 4]` because shift does *not* mutate the original array.", "qid":"1092","topics":["mutation"]},
+      {"title":"`4` and `[1, 2, 3]` because `shift()` mutates the array by removing the last element.", "qid":"1093", "topics":["operation"]},
       {"title":"`4` and `[1, 2, 3, 4]` because shift does *not* mutate the original array and removes the last elmeent.", "qid":"1094"}
     ],
-    "actual":"1094",
+    "actual":"1091",
     "category":"quiz",
     "criterion":"shift",
     "type":"radio"
@@ -328,9 +328,9 @@
     "title":"What's the expected value of `b` given `const a = ['a', 'b', 'c', 'd']`;  \n  \n `const b = a.slice(2)`",
     "labels":[
       {"title":"`['c','d']` because `slice()` returns a copy from index `2` to the end of the array.", "qid":"1095"},
-      {"title":"`['c']` because `slice()` returns a copy of the array at index `2`", "qid":"1096"},
-      {"title":"`['a','b']` because `slice()` returns a copy of the array up to index `2`", "qid":"1097"},
-      {"title":"`['a','b','c']` because `slice()` returns a copy of the array up to and including index `2`", "qid":"1098"}
+      {"title":"`['c']` because `slice()` returns a copy of the array at index `2`", "qid":"1096", "topics":["operation"]},
+      {"title":"`['a','b']` because `slice()` returns a copy of the array up to index `2`", "qid":"1097", "topics":["operation"]},
+      {"title":"`['a','b','c']` because `slice()` returns a copy of the array up to and including index `2`", "qid":"1098", "topics":["operation"]}
     ],
     "actual":"1095",
     "category":"quiz",
@@ -338,11 +338,11 @@
     "type":"radio"
   },
   "array_27":{
-    "title":"Whats the expected value of `b` given `const a = ['a', 'b', 'c', 'd'];`  \n  \n const b = a.slice(1,3)`",
+    "title":"Whats the expected value of `b` given `const a = ['a', 'b', 'c', 'd'];`  \n  \n `const b = a.slice(1,3)`",
     "labels":[
       {"title":"`['b','c']` because `slice()` returns a copy of the array between index `1` and the endpoint `3`. The endpoint is not included.", "qid":"1099"},
-      {"title":"`['b','c','d']` because `slice()` returns a copy of the array between indexes `1`, `2`, and `3`", "qid":"1100"},
-      {"title":"`['b','d']` because `slice()` returns an array copy containing item from the original array at indexes `1` and `3`", "qid":"1101"},
+      {"title":"`['b','c','d']` because `slice()` returns a copy of the array between indexes `1`, `2`, and `3`", "qid":"1100", "topics":["operation"]},
+      {"title":"`['b','d']` because `slice()` returns an array copy containing items from the original array at indexes `1` and `3`", "qid":"1101", "topics":["operation"]},
       {"title":"`['a']` because `slice()` cuts members at indexes `1` though `3`. `'a'` at index 0 is all that's left.", "qid":"1102"}
     ],
     "actual":"1099",
@@ -351,12 +351,12 @@
     "type":"radio"
   },
   "array_28":{
-    "title":"Whats the expected value of `a` given `const a = ['a', 'b', 'c', 'd'];  \n  \n const b = a.slice(1,3)`",
+    "title":"Whats the expected value of `a` given `const a = ['a', 'b', 'c', 'd'];  \n  \n `const b = a.slice(1,3)`",
     "labels":[
-      {"title":"`['a','d']` because `slice()` cuts the elements at indexes `1` and `2`", "qid":"1103"},
-      {"title":"`['a']` because `slice()` cuts the items at indexes `1` through `3`", "qid":"1104"},
-      {"title":"`['a', 'b', 'c', 'd']` because `slice()` does *not* mutate the original array.", "qid":"1105"},
-      {"title":"`['b','c']` because `slice()` returns a copy of the array between index `1` and the endpoint `3`. The endpoint is not included.", "qid":"1099"}
+      {"title":"`['a','d']` because `slice()` cuts the elements at indexes `1` and `2`", "qid":"1103", "next":"array_62"},
+      {"title":"`['a']` because `slice()` cuts the items at indexes `1` through `3`", "qid":"1104", "topics":["operation"]},
+      {"title":"`['a', 'b', 'c', 'd']` because `slice()` does *not* mutate the original array.", "qid":"1105", "topics":["mutation"], "next":"array_62"},
+      {"title":"`['b','c']` because `slice()` returns a copy of the array between index `1` and the endpoint `3`. The endpoint is not included.", "qid":"1099", "topics":["mutation"], "next":"array_62"}
     ],
     "actual":"1105",
     "category":"quiz",
@@ -377,10 +377,10 @@
     "type":"radio"
   },
   "array_30":{
-    "title":"What is the value of consts `fish` and `a` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`const x = fish.splice(1, 0, 'tilapia')`",
+    "title":"What is the value of consts `fish` and `x` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`const x = fish.splice(1, 0, 'tilapia')`",
     "labels":[
-      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` and `[]` because no items were added or removed.", "qid":"1110"},
-      {"title":"`[tilapia', 'clown', 'mandarin', 'sturgeon']` and `['angel']` because 1 item removed and replaced at the 0 index with the value 'tilapia'", "qid":"1111"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` and `[]` because no items were added or removed.", "qid":"1110", "topics":["operation"]},
+      {"title":"`[tilapia', 'clown', 'mandarin', 'sturgeon']` and `['angel']` because 1 item removed and replaced at the 0 index with the value 'tilapia'", "qid":"1111", "topics":["operation"]},
       {"title":"", "qid":"1112"},
       {"title":"`['angel', 'tilapia', 'clown', 'mandarin', 'sturgeon']` and `[]` because `splice()` inserted at the first index, removed 0 items and used 'tilapia' as the insert value. No items were removed so the return value is an empty array.", "qid":"1113"}
     ],
@@ -392,9 +392,9 @@
   "array_31":{
     "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`const x = fish.splice(1)`",
     "labels":[
-      {"title":"`['angel', ,'clown', 'mandarin', 'sturgeon']` an empty value is inserted at index `1` because no value was specified.", "qid":"1114"},
-      {"title":"`['angel', 'mandarin', 'sturgeon']` because `splice()` used `1` as an index to delete an item.", "qid":"1115"},
-      {"title":"This will result in an error because of missing required method arguments.", "qid":"1116"},
+      {"title":"`['angel', ,'clown', 'mandarin', 'sturgeon']` an empty value is inserted at index `1` because no value was specified.", "qid":"1114", "topics":["syntax"]},
+      {"title":"`['angel', 'mandarin', 'sturgeon']` because `splice()` used `1` as an index to delete an item.", "qid":"1115", "topics":["operation"]},
+      {"title":"This will result in an error because of missing required method arguments.", "qid":"1116", "topics":["syntax"]},
       {"title":"`['angel']` because `splice()` will delete everything from the start index of `1` since the second argument was not included.", "qid":"1117"}
     ],
     "actual":"1117",
@@ -406,9 +406,9 @@
     "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.splice(1,2)`",
     "labels":[
       {"title":"`['angel', 'sturgeon']` because `splice()` starts at index 1 removes 2 items and inserts nothing since a value is not passed.", "qid":"1118"},
-      {"title":"`['angel', 'sturgeon']` because `splice()` deletes everything from index 1 and index 2. nothing is inserted since no value is passed.", "qid":"1119"},
-      {"title":"`['angel', 'clown']` because `splice()` starts and index 1 and removes 2 subsequent entries.", "qid":"1120"},
-      {"title":"`['angel', 'clown', 'mandarin']` because `splice()` starts at index 2 and removed 1 entry.", "qid":"1121"}
+      {"title":"`['angel', 'sturgeon']` because `splice()` deletes everything from index 1 and index 2. nothing is inserted since no value is passed.", "qid":"1119", "topics":["operation"]},
+      {"title":"`['angel', 'clown']` because `splice()` starts and index 1 and removes 2 subsequent entries.", "qid":"1120", "topics":["operation"]},
+      {"title":"`['angel', 'clown', 'mandarin']` because `splice()` starts at index 2 and removed 1 entry.", "qid":"1121", "topics":["operation"]}
     ],
     "actual":"1118",
     "category":"quiz",
@@ -418,10 +418,10 @@
   "array_33":{
     "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.splice(-2,1)`",
     "labels":[
-      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `splice()` does not mutate the array.", "qid":"1122"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `splice()` does not mutate the array.", "qid":"1122", "topics":["mutation"]},
       {"title":"`['angel', 'clown', 'sturgeon']` because `splice()` calculates starting point from end of array with negative integers as an argument. The second arg indicates one item should be removed.", "qid":"1123"},
-      {"title":"`['mandarin', 'sturgeon']` because `splice()` starts at index 1 and moves backward removing 2 items.", "qid":"1124"},
-      {"title":"`Error` is thrown because splice() is does not accept negative numbers.", "qid":"1125"}
+      {"title":"`['mandarin', 'sturgeon']` because `splice()` starts at index 1 and moves backward removing 2 items.", "qid":"1124", "topics":["operation"]},
+      {"title":"`Error` is thrown because splice() is does not accept negative numbers.", "qid":"1125", "topics":["syntax"]}
     ],
     "actual":"1123",
     "category":"quiz",
@@ -431,10 +431,10 @@
   "array_34":{
     "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.unshift('grouper')`",
     "labels":[
-      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `unshift()` does not mutate the original array.", "qid":"1126"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `unshift()` does not mutate the original array.", "qid":"1126", "topics":["mutation"]},
       {"title":"`['grouper', 'angel', 'clown', 'mandarin', 'sturgeon']` because a new item is added to the *front* of the array.", "qid":"1127"},
-      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon', 'grouper']` because a new item is added to the *back* of the array.", "qid":"1128"},
-      {"title":"`['grouper', 'clown', 'mandarin', 'sturgeon']` because a new item is replaced at the *front* of the array.", "qid":"1129"}
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon', 'grouper']` because a new item is added to the *back* of the array.", "qid":"1128", "topics":["operation"]},
+      {"title":"`['grouper', 'clown', 'mandarin', 'sturgeon']` because a new item is replaced at the *front* of the array.", "qid":"1129", "topics":["operation"]}
     ],
     "actual":"1127",
     "category":"quiz",
@@ -445,9 +445,9 @@
     "title":"What is the value of const `fish` given: `const fish = ['angel', 'clown', 'mandarin', 'sturgeon'];`  \n`fish.unshift('grouper', 'star')`",
     "labels":[
       {"title":"`['grouper', 'star','angel', 'clown', 'mandarin', 'sturgeon'];` because if multiple elements are passed as parameters, they are inserted in the exact same order.", "qid":"1130"},
-      {"title":"`['star', 'grouper', 'angel', 'clown', 'mandarin', 'sturgeon'];` because if multiple elements are passed as parameters, they are inserted at the beginning one at a time.", "qid":"1131"},
-      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `unshift()` doesn't mutate the original array.", "qid":"1132", "next":"array_24"},
-      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because 'grouper' & 'star' don't exist in the array so they can't be unshifted (removed).", "qid":"1133"}
+      {"title":"`['star', 'grouper', 'angel', 'clown', 'mandarin', 'sturgeon'];` because if multiple elements are passed as parameters, they are inserted at the beginning one at a time.", "qid":"1131", "topics":["operation"]},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `unshift()` doesn't mutate the original array.", "qid":"1132", "next":"array_24", "topics":["mutation"]},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because 'grouper' & 'star' don't exist in the array so they can't be unshifted (removed).", "qid":"1133", "topics":["intent"]}
     ],
     "actual":"1130",
     "category":"quiz",
@@ -457,10 +457,10 @@
   "array_36":{
     "title":"What is the value of `const a` given: `var a = ['angel', 'clown', 'mandarin', 'sturgeon'].unshift('grouper', 'star');`",
     "labels":[
-      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because 'grouper' & 'star' don't exist in the array so they can't be unshifted (removed).", "qid":"1133"},
-      {"title":"`['grouper', 'star', 'angel', 'clown', 'mandarin', 'sturgeon']` because unshift adds items to the front of an array.", "qid":"1134"},
+      {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because 'grouper' & 'star' don't exist in the array so they can't be unshifted (removed).", "qid":"1133", "topics":["return","intent"]},
+      {"title":"`['grouper', 'star', 'angel', 'clown', 'mandarin', 'sturgeon']` because unshift adds items to the front of an array.", "qid":"1134", "topics":["return"]},
       {"title":"`6` because unshift() returns the length of the mutated array after adding new elements.", "qid":"1135"},
-      {"title":"`4` because unshift() returns the length of the mutated array after removing new elements.", "qid":"1136"}
+      {"title":"`4` because unshift() returns the length of the mutated array after removing new elements.", "qid":"1136", "topics":["intent"]}
     ],
     "actual":"1135",
     "category":"quiz",
@@ -470,10 +470,10 @@
   "array_37":{
     "title":"What is the output of this expression: `[2, 5, 8, 1, 4].some(x => x > 10);` ?",
     "labels":[
-      {"title":"`[]` because none of the members pass the testing function.", "qid":"1137"},
-      {"title":"`undefined` because none of the members pass the testing function.", "qid":"1138"},
+      {"title":"`[]` because none of the members pass the testing function.", "qid":"1137", "topics":["return"]},
+      {"title":"`undefined` because none of the members pass the testing function.", "qid":"1138", "topics":["return"]},
       {"title":"`false` none of the array members pass the testing function.", "qid":"1139"},
-      {"title":"A syntax error is thrown. correct usage is `Array.some([2, 5, 8, 1, 4], x => x > 10)`", "qid":"1140"}
+      {"title":"A syntax error is thrown. correct usage is `Array.some([2, 5, 8, 1, 4], x => x > 10)`", "qid":"1140", "topics":["return","static"]}
     ],
     "actual":"1139",
     "category":"quiz",
@@ -483,9 +483,9 @@
   "array_38":{
     "title":"What is the return value of: `['mandarin', 'angel', 'sturgeon', 'clown'].sort()`?",
     "labels":[
-      {"title":"There is no return value. The array is mutated in place.", "qid":"1141"},
-      {"title":"An error is thrown because a compare function is required as an argument.", "qid":"1142"},
-      {"title":"`['mandarin', 'angel', 'sturgeon', 'clown']` because the original array is always returned.", "qid":"1143"},
+      {"title":"There is no return value. The array is mutated in place.", "qid":"1141", "topics":["return"]},
+      {"title":"An error is thrown because a compare function is required as an argument.", "qid":"1142", "topics":["syntax"]},
+      {"title":"`['mandarin', 'angel', 'sturgeon', 'clown']` because the original array is always returned.", "qid":"1143", "topics":["return"]},
       {"title":"`['angel', 'clown', 'mandarin', 'sturgeon']` because `sort()` mutates the original array *and* returns the sorted array.", "qid":"1144"}
     ],
     "actual":"1144",
@@ -496,10 +496,10 @@
   "array_39":{
     "title":"Given 2 arguments `a` and `b` - what value should the compare function of the `sort()` method return?",
     "labels":[
-      {"title":"The greater of arguments `a` or `b`", "qid":"1145"},
-      {"title":"`true` or `false` depending on whether `a` is larger than `b`", "qid":"1146"},
+      {"title":"The greater of arguments `a` or `b`", "qid":"1145", "topics":["syntax"]},
+      {"title":"`true` or `false` depending on whether `a` is larger than `b`", "qid":"1146", "topics":["syntax"]},
       {"title":"Either -1, 1, or 0 depending if `a` is less than, greater than or equal to `b`", "qid":"1147"},
-      {"title":"`true` or `false` depending on whether `b` is larger than `a` or `-1` if they are equal.", "qid":"1148"}
+      {"title":"`true` or `false` depending on whether `b` is larger than `a` or `-1` if they are equal.", "qid":"1148", "topics":["syntax"]}
     ],
     "actual":"1147",
     "category":"quiz",
@@ -507,12 +507,12 @@
     "type":"radio"
   },
   "array_40":{
-    "title":"Which array methods can be called on 'array-like' objects e.g. on a function's arguments",
+    "title":"Which array methods can be called on a *string* which is an 'array-like' objects e.g. on a function's arguments",
     "labels":[
-      {"title":"", "qid":"1149"},
-      {"title":"", "qid":"1150"},
-      {"title":"", "qid":"1151"},
-      {"title":"reverse, fill", "qid":"1152"}
+      {"title":"`concat`, `every`, `fill`,", "qid":"1149"},
+      {"title":"`splice`, `reverse`, `fill`, `map`", "qid":"1150"},
+      {"title":"`push`, `pop`", "qid":"1151"},
+      {"title":"`every`,`filter`, `map`, `slice`, `includes`", "qid":"1152"}
     ],
     "actual":"1152",
     "category":"quiz",
@@ -574,7 +574,7 @@
   "array_45":{
     "title":"What is the value of `a` given: `const a = Array(3).fill(Array(4).fill('cat'))`",
     "labels":[
-      {"title":"`Uncaught TypeError` because it is not an array method.", "qid":"1030"},
+      {"title":"`Uncaught TypeError` because this is a static method the correct way to invoke the method is `Array.fill()`.", "qid":"1030", "topics":["static"]},
       {"title":"A 3 by 4 grid of arrays filled with cats.", "qid":"1163"},
       {"title":"An Array iterator which in turn can be used to get the individual items.", "qid":"1153","topics":["return","intent"]},
       {"title":"4 top level arrays each with 3 nested arrays who each have a single item - the string 'cat'", "qid":"1164"}
@@ -676,21 +676,203 @@
     "type":"radio"
   },
   "array_53":{
-    "title":"",
+    "title":"Which method creates a new array containing elements that pass the test implemented by a provided function.",
     "labels":[
-      {"title":"", "qid":"1200","topics":[]},
-      {"title":"", "qid":"1200"},
-      {"title":"", "qid":"1200", "topics":[]},
-      {"title":"", "qid":"1200", "topics":[]}
+      {"title":"`map()`", "qid":"1200","topics":["different"]},
+      {"title":"`find()`", "qid":"1201", "topics":["different"]},
+      {"title":"`reduce()`", "qid":"1202", "topics":["different"]},
+      {"title":"`filter()`", "qid":"1203"}
+    ],
+    "actual":"1203",
+    "category":"quiz",
+    "criterion":"filter",
+    "type":"radio"
+  },
+  "array_54":{
+    "title":"Which method returns a boolean determining whether an array includes a certain value among its entries?",
+    "labels":[
+      {"title":"`map()`", "qid":"1200","topics":["different"]},
+      {"title":"`includes()`", "qid":"1204"},
+      {"title":"`some()`", "qid":"1205", "topics":["different"]},
+      {"title":"`filter()`", "qid":"1203", "topics":["different"]}
+    ],
+    "actual":"1204",
+    "category":"quiz",
+    "criterion":"includes",
+    "type":"radio"
+  },
+  "array_55":{
+    "title":"Which method returns a boolean indicating whether at least one element in the array passes a provided testing function?",
+    "labels":[
+      {"title":"`filter()`", "qid":"1203","topics":["different"]},
+      {"title":"`includes()`", "qid":"1204", "topics":["different"]},
+      {"title":"`find()`", "qid":"1201", "topics":["different"]},
+      {"title":"`some()`", "qid":"1205"}
+    ],
+    "actual":"1205",
+    "category":"quiz",
+    "criterion":"some",
+    "type":"radio"
+  },
+  "array_56":{
+    "title":"Which method returns the value of the first element in a given array that satisfies a testing function?",
+    "labels":[
+      {"title":"`indexOf()`", "qid":"1206","topics":["different"]},
+      {"title":"`find()`", "qid":"1201"},
+      {"title":"`includes()`", "qid":"1204", "topics":["different"]},
+      {"title":"`some()`", "qid":"1205", "topics":["different"]}
+    ],
+    "actual":"1201",
+    "category":"quiz",
+    "criterion":"find",
+    "type":"radio"
+  },
+  "array_57":{
+    "title":"Which method returns the *first* index at which a given *element* can be found in an array?",
+    "labels":[
+      {"title":"`indexOf()`", "qid":"1206"},
+      {"title":"`find()`", "qid":"1201","topics":["different"]},
+      {"title":"`findIndex()`", "qid":"1207", "topics":["different"]},
+      {"title":"`filter()`", "qid":"1203","topics":["different"]}
+    ],
+    "actual":"1206",
+    "category":"quiz",
+    "criterion":"indexOf",
+    "type":"radio"
+  },
+  "array_58":{
+    "title":"Which method returns a new array populated with the results of calling a provided function on every element in the original array?",
+    "labels":[
+      {"title":"`some()`", "qid":"1205", "topics":["different"]},
+      {"title":"`map()`", "qid":"1200"},
+      {"title":"`find()`", "qid":"1201","topics":["different"]},
+      {"title":"`filter()`", "qid":"1203","topics":["different"]}
     ],
     "actual":"1200",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"map",
+    "type":"radio"
+  },
+  "array_59":{
+    "title":"Which method executes a given function on each element of the array and returns a single output value?",
+    "labels":[
+      {"title":"`some()`", "qid":"1205","topics":["different"]},
+      {"title":"`map()`", "qid":"1200","topics":["different"]},
+      {"title":"`reduce()`", "qid":"1202"},
+      {"title":"`filter()`", "qid":"1203","topics":["different"]}
+    ],
+    "actual":"1202",
+    "category":"quiz",
+    "criterion":"reduce",
+    "type":"radio"
+  },
+  "array_60":{
+    "title":"Which method returns the index of the first element in the array that satisfies a given testing function - otherwise returns -1 ?",
+    "labels":[
+      {"title":"`some()`", "qid":"1205","topics":["different"]},
+      {"title":"`map()`", "qid":"1200","topics":["different"]},
+      {"title":"`findIndex()`", "qid":"1207"},
+      {"title":"`filter()`", "qid":"1203","topics":["different"]}
+    ],
+    "actual":"1207",
+    "category":"quiz",
+    "criterion":"findIndex",
+    "type":"radio"
+  },
+  "array_61":{
+    "title":"Which of the following are considered 'accessor' methods?",
+    "labels":[
+      {"title":"`some()`", "qid":"1205"},
+      {"title":"`map()`", "qid":"1200"},
+      {"title":"`reduce()`", "qid":"1202"},
+      {"title":"`concat()`, `join()`, `slice()`", "qid":"1208"}
+    ],
+    "actual":"1208",
+    "category":"quiz",
+    "criterion":"categorization",
     "type":"radio"
   },
   "quiz_results":{
     "title":"Quiz Summary",
     "type":"summary",
     "qid":"10000"
-  }
+  },
+  "array_62":{
+    "title":"Does the Array `slice()` method mutate the original array?",
+    "labels":[
+      {"title":"Yes. the slice operation is performed directly on the original array.", "qid":"1209","topics":["mutation"]},
+      {"title":"No. the original array remains unchanged.", "qid":"1210"},
+      {"title":"None of the above.", "qid":"1211"}
+    ],
+    "actual":"1210",
+    "category":"quiz",
+    "criterion":"slice",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  },
+  "array_63":{
+    "title":"Where in the target array does the 'push()' method add new items?",
+    "labels":[
+      {"title":"The *beginning* of the Array", "qid":"1212", "topics":["operation"]},
+      {"title":"The *end* of the Array", "qid":"1213"},
+    ],
+    "actual":"1213",
+    "category":"quiz",
+    "criterion":"push",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  },
+  "array_64":{
+    "title":"Does the Array `push()` method change to original array?",
+    "labels":[
+      {"title":"Yes. the original array is mutated.", "qid":"1214"},
+      {"title":"No. the original array is left untouched.", "qid":"1215",}
+    ],
+    "actual":"1214",
+    "category":"quiz",
+    "criterion":"push",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  },
+  "array_65":{
+    "title":"Which of the below techniques will convert the string `'foo'` to an array?",
+    "labels":[
+      {"title":"`[...'foo']`", "qid":"1216"},
+      {"title":"`Array.from('foo')`", "qid":"1217"},
+      {"title":"`Array.prototype.slice.call('foo')`", "qid":"1218"},
+      {"title":"All of the above", "qid":"1219"}
+    ],
+    "actual":"1219",
+    "category":"quiz",
+    "criterion":"type-converstion",
+    "type":"radio"
+  },
+  "array_66":{
+    "title":"Does the Array `pop()` method remove last item from an array?",
+    "labels":[
+      {"title":"Yes, it removes and returns the *last* item in an array.", "qid":"1220"},
+      {"title":"No, it removes and returns the *first* item in an array.", "qid":"1221", "topics":["operation"]}
+    ],
+    "actual":"1220",
+    "category":"quiz",
+    "criterion":"pop",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"JS Array Methods Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  },
 }

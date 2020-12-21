@@ -1,108 +1,171 @@
 {
-  "plantId_1":{
-    "title":"Which of the following is the name of this plant?",
-    "media": [
-      {"type":"image", "src":"/img/al_aculeata_a_200.jpg"}
-    ],
+  "object_1":{
+    "title":"Given: `const o1 = { a: 1 }; const o2 = { b: 2 }; const o3 = { c: 3 };`  \n  \n`const obj = Object.assign(o1, o2, o3);`  \n  \nWhat is the value of `obj`?",
     "labels":[
-      {"title":"Aloe aculeata", "qid":"105"},
-      {"title":"Agave sp.", "qid":"106"},
-      {"title":"Echeveria 'Fang'", "qid":"107"},
-      {"title":"Gasteria baylissiana", "qid":"108"}
+      {"title":"`undefined` because `assign()` doesn't return a value, it modifies the target object.", "qid":"2001"},
+      {"title":"`{ b: 2, c: 3 }` because the target is overwritten by the source objects.", "qid":"2002"},
+      {"title":"`{ a: 1, b: 2, c: 3 }` because the sources are applied to the target object and returned.", "qid":"2003"},
+      {"title":"None of the above.", "qid":"2004"}
     ],
-    "actual":"105",
+    "actual":"2003",
     "category":"quiz",
-    "criterion":"aloe",
+    "criterion":"assign",
     "type":"radio"
   },
-  "plantId_2":{
-    "title":"Which of the following is the name of this plant?",
-    "media": [
-      {"type":"image", "src":"/img/a_brevifolia_c_200.jpg"}
-    ],
+  "object_2":{
+    "title":"Given: `const o1 = { a: 1 }; const o2 = { b: 2 }; const o3 = { c: 3 };`  \n  \n`const obj = Object.assign(o1, o2, o3);`  \n  \nWhat is the value of `o1`?",
     "labels":[
-      {"title":"Aloe arborescens", "qid":"109"},
-      {"title":"Aloe vera", "qid":"110"},
-      {"title":"Detour", "qid":"111", "next":"plantId_4"},
-      {"title":"Aloe brevifolia", "qid":"112"},
-      {"title":"Aloe aculeata", "qid":"113"}
+      {"title":"`{ a: 1 }` because the original object is not mutated.", "qid":"2005"},
+      {"title":"`{ a: 1, b: 2, c: 3 }` because the sources are applied to the target object as well as being returned.", "qid":"2006"},
+      {"title":"`{ b: 2, c: 3 }` because the target is overwritten by the source objects.", "qid":"2007"}
     ],
-    "actual":"112",
+    "actual":"2006",
     "category":"quiz",
-    "criterion":"aloe",
+    "criterion":"assign",
     "type":"radio"
   },
-  "plantId_3":{
-    "title":"Which of the following is the name of this plant?",
-    "media": [
-      {"type":"image", "src":"/img/a_bracteosa_d_200.jpg"}
-    ],
+  "object_3":{
+    "title":"Given: `const o1 = { a: 1 }; const o2 = { a: 2, b: 2 };`  \n  \n`const obj = Object.assign(o1, o2);`  \n  \nWhat is the value of `o1`?",
     "labels":[
-      {"title":"Agave celsii", "qid":"114"},
-      {"title":"Aloe vera", "qid":"115"},
-      {"title":"Agave bracteosa", "qid":"116"},
-      {"title":"Echeveria agavoides", "qid":"117"},
-      {"title":"Dudlyea brittonii", "qid":"118"}
+      {"title":"`{ a: 2, b: 2 };` because when objects have the same keys - later objects overwrite earlier ones.", "qid":"2008"},
+      {"title":"`{ a: 1, a: 2, b: 2 };` because the sources are applied to the target object.", "qid":"2009"},
+      {"title":"`{ a: 1 }` because the target is not mutated.", "qid":"2010"},
+      {"title":"`{ a: 1, b: 2 };` because the sources are applied to the target object without overwriting them.", "qid":"2011"}
     ],
-    "actual":"116",
+    "actual":"2008",
     "category":"quiz",
-    "criterion":"agave",
+    "criterion":"assign",
     "type":"radio"
   },
-  "plantId_4":{
-    "title":"Which of the following is the name of this plant?",
-    "media": [
-      {"type":"image", "src":"/img/a_bracteosa_h_200.jpg"}
-    ],
+  "object_4":{
+    "title":"Given: `const o1 = { a: 1 }; const o2 = { a: 2, b: 2 };`  \n  \n`const obj = Object.assign({}, o1, o2);`  \n  \nWhat is the value of `o1`?",
     "labels":[
-      {"title":"Agave celsii", "qid":"114"},
-      {"title":"Nested Detour 1", "qid":"115", "next":"plantId_5"},
-      {"title":"Agave bracteosa", "qid":"116"},
-      {"title":"Nested Detour 2", "qid":"117","next":"plantId_6"},
-      {"title":"Dudlyea brittonii", "qid":"118"}
+      {"title":"`{ a: 1, b: 2 };` because the sources are applied to one another without overwriting them.", "qid":"2012"},
+      {"title":"`{ a: 2, b: 2 };` because when objects have the same keys - later sources overwrite earlier ones.", "qid":"2013"},
+      {"title":"`{ a: 1, a: 2, b: 2 };` because the sources are applied in order.", "qid":"2014"},
+      {"title":"`{ a: 1 }` because source objects are not overwritten or mutated.", "qid":"2015"}
     ],
-    "actual":"116",
+    "actual":"2015",
     "category":"quiz",
-    "criterion":"agave",
-    "type":"radio",
-    "comment":"another chance at agave bracteosa w/a different picture."
-  },
-  "plantId_5":{
-    "title":"A Detour Question",
-    "media": [
-      {"type":"image", "src":"/img/a_bracteosa_frost_200.jpg"}
-    ],
-    "labels":[
-      {"title":"Agave bracteosa 'Calamar'", "qid":"119"},
-      {"title":"Aloe sp.", "qid":"120"},
-      {"title":"Agave bracteosa", "qid":"121"},
-      {"title":"Echeveria", "qid":"122"},
-      {"title":"Agave bracteosa varigata", "qid":"123"}
-    ],
-    "actual":"121",
-    "category":"quiz",
-    "criterion":"agave",
+    "criterion":"assign",
     "type":"radio"
   },
-  "plantId_6":{
-    "title":"Compound branch 1 Question 1",
-    "media": [
-      {"type":"image", "src":"/img/a_attenuata_a_200.jpg"}
-    ],
+  "object_5":{
+    "title":"When making a copy of an object: `let obj1 = { a: 0 , b: { c: 0}}; let obj2 = Object.assign({}, obj1);`  \n  \n Then updating the copy `obj2.b.c = 3;  \n  \n What is the value of `obj1`?",
     "labels":[
-      {"title":"Agave bovicornuta", "qid":"124"},
-      {"title":"Agave havardiana", "qid":"125"},
-      {"title":"Agave attenuata", "qid":"126"},
-      {"title":"Agave lophantha", "qid":"127"},
-      {"title":"Agave bracteosa", "qid":"128"}
+      {"title":"`{ a: 0 , b: { c: 3}};` because property values are copied by reference. deep cloning is not supported.", "qid":"2016"},
+      {"title":"`{ a: 0 , b: { c: 0}};` because the original object is not updated.", "qid":"2017", "topics":["reference"]},
+      {"title":"`{}` because the values from obj1 are copied / pasted into the object literal.", "qid":"2018", "topics":["reference"]},
+      {"title":"None of the above.", "qid":"2019"}
     ],
-    "actual":"126",
+    "actual":"2016",
     "category":"quiz",
-    "criterion":"agave",
+    "criterion":"assign",
+    "type":"radio"
+  },
+  "object_6":{
+    "title":"Given:  \n  \n`let a = { foo:'bar',`  \n&emsp;`print: function(){ console.log('foo:',this.foo)}`  \n  \n`let b = Object.create(a);`  \n  \n`let c = Object.create(a);`  \n  \n`b.foo = 'baz'; c.foo = 'biz';`  \n  \n`a.print()`  \n  \n What is the output?",
+    "labels":[
+      {"title":"`foo: baz` because `create()` makes a new object based on `a` but props are copied by reference.", "qid":"2020"},
+      {"title":"`foo: bar` because `a` is used as a prototype only.", "qid":"2021"},
+      {"title":"`foo: biz` because `a` is used as a prototype but it's props are copied by reference.", "qid":"2022"},
+      {"title":"None of the above", "qid":"2023"}
+    ],
+    "actual":"2021",
+    "category":"quiz",
+    "criterion":"create",
+    "type":"radio"
+  },
+  "object_7":{
+    "title":"Why use `Object.create(null)` vs `Object.create({})` ?",
+    "labels":[
+      {"title":"You shouldn't. `null` is not a valid argument to use when creating new objects.", "qid":"2024"},
+      {"title":"Because it creates a completely empty object without references to Object.prototype methods.", "qid":"2025"}
+    ],
+    "actual":"2025",
+    "category":"quiz",
+    "criterion":"create",
+    "type":"radio"
+  },
+  "object_8":{
+    "title":"Given: `var obj1 = {foo:'bar'}`  \n  \n What's the difference in the return value between `var b = Object.create(obj1)` and `var c = Object.assign(obj1)`?",
+    "labels":[
+      {"title":"`b` is a clone of `a` because `create()` copies by cloning while `c` is a reference to `a` because `assign()` copies by reference.", "qid":"2030"},
+      {"title":"There is no difference. Both methods return new objects copied from obj1.", "qid":"2031", "topics":["return"]},
+      {"title":"`c` is a clone of `a` while `b` is a reference to `a`", "qid":"2032", "topics":["return"]},
+      {"title":"None of the above.", "qid":"2033"}
+    ],
+    "actual":"2030",
+    "category":"quiz",
+    "criterion":"create",
+    "type":"radio"
+  },
+  "object_9":{
+    "title":"Given:  \n  \n`let a = {foo:'bar', biz:'baz'}`  \n  \n What does `Object.entries(a)` return?",
+    "labels":[
+      {"title":"An iterator that can be used to get to get the Object properties", "qid":"2026", "topics":["return"]},
+      {"title":"A syntax error because the correct syntax is `a.entries()`", "qid":"2027", "topics":["return"]},
+      {"title":"A nested array of property names and values.", "qid":"2028"},
+      {"title":"An object containing the property names and values", "qid":"2029", "topics":["return"]}
+    ],
+    "actual":"2028",
+    "category":"quiz",
+    "criterion":"entries",
+    "type":"radio"
+  },
+  "object_10":{
+    "title":"Whhich of the following methods will make a given object immutable?",
+    "labels":[
+      {"title":"`Object.seal(obj)`", "qid":"2034", "topics":["intent"]},
+      {"title":"`Object.freeze(obj)`", "qid":"2035"},
+      {"title":"`Object.preventExtensions(obj)`", "qid":"2036", "topics":["intent"]},
+      {"title":"`obj.toString()`", "qid":"2037", "topics":["intent"]}
+    ],
+    "actual":"2035",
+    "category":"quiz",
+    "criterion":"freeze",
+    "type":"radio"
+  },
+  "object_11":{
+    "title":"Given: `var obj1 = { a: 1, b: {c: 1} }; Object.freeze(obj1);`  \n  \n`obj1.b.c = 2;`  \n  \n What is the value of `obj1`?",
+    "labels":[
+      {"title":"`{ a: 1, b: {c: 1} }` because `freeze()` makes an object immutable.", "qid":"2038", "topics":["deep_cloning"]},
+      {"title":"`{ a: 1, b: 2 }`", "qid":"2039"},
+      {"title":"`{ a: 1, b: {c: 2} }` because `freeze()` doesn't support deep cloning.", "qid":"2040"}
+    ],
+    "actual":"2040",
+    "category":"quiz",
+    "criterion":"freeze",
+    "type":"radio"
+  },
+  "object_100":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"2000"},
+      {"title":"", "qid":"2000"},
+      {"title":"", "qid":"2000"},
+      {"title":"", "qid":"2000"}
+    ],
+    "actual":"2000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "object_101":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"2000"},
+      {"title":"", "qid":"2000"},
+      {"title":"", "qid":"2000"},
+      {"title":"", "qid":"2000"}
+    ],
+    "actual":"2000",
+    "category":"quiz",
+    "criterion":"",
     "type":"radio"
   },
   "quiz_results":{
-    "title":"Quiz Summary",
+    "title":"JS Object Methods Quiz Summary",
     "type":"summary",
     "qid":"10000"
   }

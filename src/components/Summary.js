@@ -2,7 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const Summary = ({correctResponses, inCorrectResponses}) => {
-  console.log("Summary: inCorrectResponses:",inCorrectResponses);
+  //console.log("Summary: inCorrectResponses:",inCorrectResponses);
 
   //
   const unique = (categories, accumulator={}) => {
@@ -53,30 +53,57 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
     return topics && topics.map(topic => {
       let description;
       switch(topic) {
+        case 'boundry':
+          description = `An index used is out of bounds.`
+          break;
+        case 'categorization':
+          description = `Learn more about how methods are grouped into categories of similar functionality.`
+          break;
+        case 'complicated':
+          description = `The solution may work but is more complicated than necessary.`
+          break;
+        case 'deep_cloning':
+          description = `The ${question.criterion}() method doesn't support deep cloning.`
+          break;
         case 'different':
           description = `Wrong method. The intent of the method you chose doesn't match the task.`
-        break;
+          break;
+        case 'generic':
+          description = `The ${question.criterion}() method is intentially generic. It doesn't require it's 'this' property to be a specific built-in object.`
+          break;
+        case 'generic_syntax':
+          description = `The syntax to call a built-in object's method generically is: [built in object name].prototype.[method name].call([this ref], args)`;
+          break;
+        case 'hardwired':
+          description = `The solution isn't reuasable because it has a hard wired value.`
+          break;
         case 'intent':
           description = `Take a second look at the intent of the ${question.criterion}() method.`
-        break;
+          break;
         case 'mutation':
           description = `Be sure to understand if the ${question.criterion}() method changes it's target "in place" or not.`
-        break;
+          break;
+        case 'operation':
+          description = `The ${question.criterion}() method doesn't operate that way.`
+          break;
         case 'return':
           description = `Take a second look at the expected return value for the ${question.criterion}() method.`
-        break;
+          break;
         case 'reference':
           description = `The original value was copied by 'reference'`
-        break;
+          break;
+        case 'scope':
+          description = `Be sure to understand scope. This determines what declared variables, functions and classes are available.`
+          break;
         case 'static':
           description = `Make sure you know which methods are static. This determines how they are invoked from built in JS objects.`
-        break;
+          break;
         case 'syntax':
           description = `Review the correct syntax to invoke the ${question.criterion}() method.`
-        break;
+          break;
         default:
           description = topic;
-        break;
+          break;
       }
       return (<><em>Follow up:</em><p>{description}</p></>)
     });

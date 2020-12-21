@@ -5,7 +5,7 @@
   "module_array":{
     "title":"JS Array Concepts",
     "questions": [
-      {"id":"array_1", "next":"array_2"},
+      {"id":"array_1", "next":"array_13"},
       {"id":"array_2", "next":"array_3"},
       {"id":"array_3", "next":"array_4"},
       {"id":"array_4", "next":"array_5"},
@@ -13,7 +13,7 @@
       {"id":"array_6", "next":"array_7"},
       {"id":"array_7", "next":"array_8"},
       {"id":"array_8", "next":"array_9"},
-      {"id":"array_9", "next":"array_50"},
+      {"id":"array_9", "next":"array_10"},
       {"id":"array_10", "next":"array_11"},
       {"id":"array_11", "next":"array_12"},
       {"id":"array_12", "next":"array_13"},
@@ -56,7 +56,8 @@
       {"id":"array_49", "next":"array_50"},
       {"id":"array_50", "next":"array_51"},
       {"id":"array_51", "next":"array_52"},
-      {"id":"array_52"}
+      {"id":"array_52", "next":"array_65"},
+      {"id":"array_65"}
     ],
     "next":"module_final"
   },

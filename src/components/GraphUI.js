@@ -85,8 +85,6 @@ const GraphUI = ({graph_path, question_set_path, intro_text='Introduction...'}) 
       }
       {currentQuestion &&
         <div style={{padding:".5rem"}}>
-          <p><em>Question ID:</em> "{currentQuestion.id}"</p>
-          <hr></hr>
           <ReactMarkdown className="question-container" source={currentQuestion.title} />
           {currentQuestion.media &&
             currentQuestion.media.map(item => item.type==='image' &&
@@ -109,10 +107,10 @@ const GraphUI = ({graph_path, question_set_path, intro_text='Introduction...'}) 
         </div>
       }
       {!isFinalModule &&
-        <>
-        <button onClick={handlePrevClick} disabled={!DecisionTree.hasPreviousQuestion()}>Prev</button>
-        <button onClick={handleNextClick} disabled={!displayNextBtn}>Next</button>
-        </>
+        <div className="form-controls">
+          <button onClick={handlePrevClick} disabled={!DecisionTree.hasPreviousQuestion()}>Prev</button>
+          <button onClick={handleNextClick} disabled={!displayNextBtn}>Next</button>
+        </div>
       }
     </div>
   );

@@ -1,0 +1,163 @@
+{
+  "fundamental_1":{
+    "title":"Given:  \n  \n`console.log(myNum);`  \n  \n`var myNum;`  \n  \n`myNum = 5`   \n  \n what value is logged?",
+    "labels":[
+      {"title":"`5`", "qid":"3001"},
+      {"title":"A reference error is thrown because variable is used before it's been declared.", "qid":"3002"},
+      {"title":"`undefined` because in js declarations are hoisted.", "qid":"3003"},
+      {"title":"None of the above.", "qid":"3004"}
+    ],
+    "actual":"3003",
+    "category":"quiz",
+    "criterion":"hoisting",
+    "type":"radio"
+  },
+  "fundamental_2":{
+    "title":"Given:  \n  \n`console.log(myNum);`  \n  \n`myNum = 5`  \n  \n what value is logged?",
+    "labels":[
+      {"title":"A reference error is thrown because the variable is used without being declared. JS hoists declarations only.", "qid":"3005"},
+      {"title":"`undefined` because in js initializations and declarations are hoisted.", "qid":"3006"},
+      {"title":"5", "qid":"3007"},
+      {"title":"None of the above.", "qid":"3008"}
+    ],
+    "actual":"3005",
+    "category":"quiz",
+    "criterion":"hoisting",
+    "type":"radio"
+  },
+  "fundamental_3":{
+    "title":"Given:  \n  \n`console.log(myNum);`  \n  \n`if(1) {`  \n&emsp;`let myNum = 5`  \n  \n `}`  \n  \n  what value is logged?",
+    "labels":[
+      {"title":"5", "qid":"3009", "topics":["scope"]},
+      {"title":"`Uncaught ReferenceError` because let is block scoped and so not hoisted outside the conditional.", "qid":"3010"},
+      {"title":"`undefined` because in js initializations and declarations are hoisted.", "qid":"3011", "topics":["scope"]}
+    ],
+    "actual":"3010",
+    "category":"quiz",
+    "criterion":"hoisting",
+    "type":"radio"
+  },
+  "fundamental_4":{
+    "title":"",
+    "labels":[
+      {"title":"1", "qid":"2012"},
+      {"title":"2", "qid":"2013"},
+      {"title":"3", "qid":"2014"},
+      {"title":"4", "qid":"2015"}
+    ],
+    "actual":"2015",
+    "category":"quiz",
+    "criterion":"assign",
+    "type":"radio"
+  },
+  "fundamental_5":{
+    "title":"",
+    "labels":[
+      {"title":"1", "qid":"2016"},
+      {"title":"2", "qid":"2017", "topics":["reference"]},
+      {"title":"3", "qid":"2018", "topics":["reference"]},
+      {"title":"None of the above.", "qid":"2019"}
+    ],
+    "actual":"2016",
+    "category":"quiz",
+    "criterion":"assign",
+    "type":"radio"
+  },
+  "fundamental_6":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"}
+    ],
+    "actual":"3000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "fundamental_7":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"}
+    ],
+    "actual":"3000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "fundamental_8":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"}
+    ],
+    "actual":"3000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "fundamental_9":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"}
+    ],
+    "actual":"3000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "fundamental_10":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"}
+    ],
+    "actual":"3000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "fundamental_100":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"}
+    ],
+    "actual":"3000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "fundamental_101":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"},
+      {"title":"", "qid":"3000"}
+    ],
+    "actual":"3000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"JS Object Methods Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  }
+
+}

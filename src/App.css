@@ -65,6 +65,11 @@ nav .active {
   margin: 0 .5rem;
 }
 
+.form-controls button {
+  font-size: larger;
+  margin-left: .5rem;
+}
+
 footer {
   background: #efefef;
 

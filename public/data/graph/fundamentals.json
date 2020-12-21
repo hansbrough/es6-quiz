@@ -1,0 +1,22 @@
+{
+  "meta":{
+    "graph_id":"1"
+  },
+  "module_fundamentals":{
+    "title":"JS Fundamental Concepts",
+    "questions": [
+      {"id":"fundamental_1", "next":"fundamental_2"},
+      {"id":"fundamental_2", "next":"fundamental_3"},
+      {"id":"fundamental_3", "next":"fundamental_4"},
+      {"id":"fundamental_4", "next":"fundamental_5"},
+      {"id":"fundamental_5"}
+    ],
+    "next":"module_final"
+  },
+  "module_final":{
+    "title":"What's Next",
+    "questions": [
+      { "id":"quiz_results"}
+    ]
+  }
+}
