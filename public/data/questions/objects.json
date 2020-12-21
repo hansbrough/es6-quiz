@@ -114,7 +114,7 @@
     "type":"radio"
   },
   "object_10":{
-    "title":"Whhich of the following methods will make a given object immutable?",
+    "title":"Which of the following methods will make a given object immutable?",
     "labels":[
       {"title":"`Object.seal(obj)`", "qid":"2034", "topics":["intent"]},
       {"title":"`Object.freeze(obj)`", "qid":"2035"},
@@ -136,6 +136,66 @@
     "actual":"2040",
     "category":"quiz",
     "criterion":"freeze",
+    "type":"radio"
+  },
+  "object_12":{
+    "title":"Given: `Object.is(0, null)` what's the expected output?",
+    "labels":[
+      {"title":"`true` because `is()` will coerce arguments into truthy / falsy values like a `==` comparison.", "qid":"2041", "topics":["intent"]},
+      {"title":"`false` because `is()` doesn't coerce values and acts like a `===` comparison.", "qid":"2042", "topics":["intent"]},
+      {"title":"`false` because `is()` makes sure arguments are the *same* value.", "qid":"2043"}
+    ],
+    "actual":"2000",
+    "category":"quiz",
+    "criterion":"is",
+    "type":"radio"
+  },
+  "object_13":{
+    "title":"Given: `Object.is({}, {})` what's the expected output?",
+    "labels":[
+      {"title":"`false` because `is()` makes sure arguments are the *same* value - in this case object instances.", "qid":"2044"},
+      {"title":"`true` because both arguments are object literals.", "qid":"2045"},
+      {"title":"Syntax error because `is()` is not a static method. It's prototyped and called in the form of `someObj.is({})`", "qid":"2046"}
+    ],
+    "actual":"2044",
+    "category":"quiz",
+    "criterion":"is",
+    "type":"radio"
+  },
+  "object_14":{
+    "title":"Given: `var obj1 = { a: 1 };`  \n  \nWhat are the return values for  \n  \n`obj1.hasOwnProperty('a')` and `obj1.hasOwnProperty('toString')`?",
+    "labels":[
+      {"title":"`true` and `true` because 'foo' was assigned and 'toString' was inherited.", "qid":"2047"},
+      {"title":"`true` and `false` because 'toString' is inherited - not an 'own' prop.", "qid":"2048"},
+      {"title":"`false` and `false` because neither of the props belong to `obj1`", "qid":"2049"}
+    ],
+    "actual":"2048",
+    "category":"quiz",
+    "criterion":"hasOwnProperty",
+    "type":"radio"
+  },
+  "object_15":{
+    "title":"Given: `var obj1 = { a:1, b:2, c:3 };`  \n  \n`obj1.keys()` what is the expected return value?",
+    "labels":[
+      {"title":"`Uncaught TypeError` because `keys()`is an Object static method.", "qid":"2050"},
+      {"title":"`['a', 'b', 'c']`", "qid":"2051", "topics":["static"]},
+      {"title":"`[[1,'a'], [2,'b'], [3,'c']]`", "qid":"2052", "topics":["return"]}
+    ],
+    "actual":"2050",
+    "category":"quiz",
+    "criterion":"keys",
+    "type":"radio"
+  },
+  "object_16":{
+    "title":"Given: `var obj1 = { a:1, b:2, c:3 };`  \n  \n`Object.values(obj1)` what is the expected return value?",
+    "labels":[
+      {"title":"`Uncaught TypeError` because `values()`is an Object prototyped method not a static method.", "qid":"2053"},
+      {"title":"`[[1], [2], [3]]`", "qid":"2054","topics":["return"]},
+      {"title":"`[1, 2, 3]`", "qid":"2055"}
+    ],
+    "actual":"2055",
+    "category":"quiz",
+    "criterion":"values",
     "type":"radio"
   },
   "object_100":{

@@ -5,7 +5,7 @@
   "module_objects":{
     "title":"JS Object Concepts",
     "questions": [
-      {"id":"object_1", "next":"object_11"},
+      {"id":"object_1", "next":"object_2"},
       {"id":"object_2", "next":"object_3"},
       {"id":"object_3", "next":"object_4"},
       {"id":"object_4", "next":"object_5"},
@@ -14,8 +14,13 @@
       {"id":"object_7", "next":"object_8"},
       {"id":"object_8", "next":"object_9"},
       {"id":"object_9", "next":"object_10"},
-      {"id":"object_10","next":"object_11"},
-      {"id":"object_11"}
+      {"id":"object_10", "next":"object_11"},
+      {"id":"object_11", "next":"object_12"},
+      {"id":"object_12", "next":"object_13"},
+      {"id":"object_13", "next":"object_14"},
+      {"id":"object_14", "next":"object_15"},
+      {"id":"object_15", "next":"object_16"},
+      {"id":"object_16"}
     ],
     "next":"module_final"
   },
