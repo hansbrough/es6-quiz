@@ -1,0 +1,162 @@
+{
+  "map_1":{
+    "title":"Why use a Map vs an Object?",
+    "labels":[
+      {"title":"A Map does not contain any keys by default. It only contains what is explicitly put into it. Objects contain default keys that could collide with your own keys if you're not careful.", "qid":"4001"},
+      {"title":"The number of items in a Map is easily retrieved from its size property.", "qid":"4002"},
+      {"title":"A Map's keys can be any value (including functions, objects, or any primitive). Object keys must be a String or Symbol.", "qid":"4003"},
+      {"title":"All of the above.", "qid":"4004"}
+    ],
+    "actual":"4004",
+    "category":"quiz",
+    "criterion":"benefits",
+    "type":"radio"
+  },
+  "map_2":{
+    "title":"Given: `const m = new Map([ [1, 'cat'], [2, 'dog'], [3, 'bird'] ])`\n  \n How do you get the length of Map `m`?",
+    "labels":[
+      {"title":"`m.length` use the built in length property.", "qid":"4005", "topics":["no_such"]},
+      {"title":"`m.size()` use the built in size method.", "qid":"4006", "topics":["no_such"]},
+      {"title":"`m.size` use the built in size property.", "qid":"4007"},
+      {"title":"`const len = m.reduce((acc, current) => current + acc);` write a simple reducer.", "qid":"4008", "topics":["complicated"]}
+    ],
+    "actual":"4007",
+    "category":"quiz",
+    "criterion":"size",
+    "type":"radio"
+  },
+  "map_3":{
+    "title":"Given: `const m = new Map([ [1, 'cat'], [2, 'dog'] ])`\n  \n How might you best add a new entry to `m`?",
+    "labels":[
+      {"title":"`m.set(3,'bird')`", "qid":"4009"},
+      {"title":"`m.set('bird')`", "qid":"4010", "topics":["syntax"]},
+      {"title":"`m[4] = 'fish'`", "qid":"4011", "topcs":["intent"]}
+    ],
+    "actual":"4009",
+    "category":"quiz",
+    "criterion":"set",
+    "type":"radio"
+  },
+  "map_4":{
+    "title":"Given: `const m = new Map([ [1, 'cat'] ]); m[2] = 'dog'`\n  \n What is the return value for `m.has(2)`?",
+    "labels":[
+      {"title":"`false` because the second index was added incorrectly and as a result is not accessible by the `has()` method.", "qid":"4012"},
+      {"title":"`false` because the correct syntax is `m.has('dog')`", "qid":"4013","topics":["syntax"]},
+      {"title":"`true` because values can be added to Maps without using their setter method.", "qid":"4014", "topics":["intent"]},
+      {"title":"`false` because the correct syntax is `m.has([2])`", "qid":"4015"}
+    ],
+    "actual":"4015",
+    "category":"quiz",
+    "criterion":"has",
+    "type":"radio"
+  },
+  "map_5":{
+    "title":"Given: `const m = new Map([ [1, 'cat'] ]); m[2] = 'dog'`\n  \n What is the return value for `m.get(2)`?",
+    "labels":[
+      {"title":"`undefined` because the second index was added incorrectly and as a result is not accessible by the `get()` method.", "qid":"4016"},
+      {"title":"`'dog'` because values can be added to Maps without using their setter method.", "qid":"4017", "topics":["intent"]},
+      {"title":"`1` because this represents the index at which the value can be found in the Map.", "qid":"4018", "topics":["intent"]},
+      {"title":"`-1` because the value was added incorrectly, it's index cannot be found.", "qid":"4019", "topics":["intent"]}
+    ],
+    "actual":"4016",
+    "category":"quiz",
+    "criterion":"get",
+    "type":"radio"
+  },
+  "map_6":{
+    "title":"What method will remove *all* entries from a Map?",
+    "labels":[
+      {"title":"`remove()`", "qid":"4020", "topics":["no_such"]},
+      {"title":"`clear()`", "qid":"4021"},
+      {"title":"`reset()`", "qid":"4022", "topics":["no_such"]},
+      {"title":"`delete()`", "qid":"4023", "topics":["different"]}
+    ],
+    "actual":"4021",
+    "category":"quiz",
+    "criterion":"clear",
+    "type":"radio"
+  },
+  "map_7":{
+    "title":"What method will remove a given entry from a Map?",
+    "labels":[
+      {"title":"`remove()`", "qid":"4024", "topics":["no_such"]},
+      {"title":"`clear()`", "qid":"4025", "topics":["different"]},
+      {"title":"`reset()`", "qid":"4026", "topics":["no_such"]},
+      {"title":"`delete()`", "qid":"4027"}
+    ],
+    "actual":"4027",
+    "category":"quiz",
+    "criterion":"delete",
+    "type":"radio"
+  },
+  "map_8":{
+    "title":"Given: `const m = new Map([ [1, 'cat'], [2, 'dog'] ])`\n  \nWhat value will `m.entries()` return?",
+    "labels":[
+      {"title":"`[ [1, 'cat'], [2, 'dog'] ]` the nested array of values.", "qid":"4028", "topics":["return"]},
+      {"title":"An iterator which can be used to get the Map values.", "qid":"4029"},
+      {"title":"`['cat', 'dog']` an array of values found in the Map.", "qid":"4030", "topics":["return"]},
+      {"title":"None of the above.", "qid":"4031"}
+    ],
+    "actual":"4029",
+    "category":"quiz",
+    "criterion":"entries",
+    "type":"radio"
+  },
+  "map_9":{
+    "title":"Given: `const m = new Map([ [1, 'cat'], [2, 'dog'] ])`\n  \nHow can you extract values from `const iterator = m.entries();` ?",
+    "labels":[
+      {"title":"`let vals = [...iterator].map((idx, val) => val);` spread the iterator and run the `map` method.", "qid":"4032"},
+      {"title":"`for(let [idx, val] of iterator) { console.log(val) }` use a 'for-of' loop on the iterator.", "qid":"4033"},
+      {"title":"`iterator.forEach(val => console.log(val))` use the iterators built in 'forEach' method.", "qid":"4034", "topics":["no-such"]},
+      {"title":"Only the 'spread' and 'for-of' options.", "qid":"4035"}
+    ],
+    "actual":"4035",
+    "category":"quiz",
+    "criterion":"entries",
+    "type":"radio"
+  },
+  "map_10":{
+    "title":"Given: `const m = new Map([ [1, 'cat'], [2, 'dog'] ])`\n  \nWhat is the best way to iterate over the values of Map items?",
+    "labels":[
+      {"title":"`m.forEach(val => console.log(val))`", "qid":"4036"},
+      {"title":"`m.forEach((key, val) => console.log(val))`", "qid":"4037", "topics":["syntax"]},
+      {"title":"`Map.forEach(m, (val) => console.log(val))`", "qid":"4038", "topics":["syntax"]}
+    ],
+    "actual":"4036",
+    "category":"quiz",
+    "criterion":"forEach",
+    "type":"radio"
+  },
+  "map_100":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"4000"},
+      {"title":"", "qid":"4000"},
+      {"title":"", "qid":"4000"},
+      {"title":"", "qid":"4000"}
+    ],
+    "actual":"4000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "map_101":{
+    "title":"",
+    "labels":[
+      {"title":"", "qid":"4000"},
+      {"title":"", "qid":"4000"},
+      {"title":"", "qid":"4000"},
+      {"title":"", "qid":"4000"}
+    ],
+    "actual":"4000",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"JS Maps Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  }
+
+}

@@ -1,0 +1,27 @@
+{
+  "meta":{
+    "graph_id":"1"
+  },
+  "module_maps":{
+    "title":"JS Maps",
+    "questions": [
+      {"id":"map_1", "next":"map_2"},
+      {"id":"map_2", "next":"map_3"},
+      {"id":"map_3", "next":"map_4"},
+      {"id":"map_4", "next":"map_5"},
+      {"id":"map_5", "next":"map_6"},
+      {"id":"map_6", "next":"map_7"},
+      {"id":"map_7", "next":"map_8"},
+      {"id":"map_8", "next":"map_9"},
+      {"id":"map_9", "next":"map_10"},
+      {"id":"map_10"}
+    ],
+    "next":"module_final"
+  },
+  "module_final":{
+    "title":"What's Next",
+    "questions": [
+      { "id":"quiz_results"}
+    ]
+  }
+}

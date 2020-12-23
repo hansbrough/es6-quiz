@@ -47,9 +47,9 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
 
   // given a question object determine 'advice' to return
   const makeQuestionFollowupAdvice = (question) => {
-    console.log("makeQuestionFollowupAdvice");
+    //console.log("makeQuestionFollowupAdvice:",question);
     const topics = question.labels.find(label => label.qid === question.answerId).topics;
-    console.log("...topics:",topics);
+    //console.log("...topics:",topics);
     return topics && topics.map(topic => {
       let description;
       switch(topic) {
@@ -83,6 +83,9 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
         case 'mutation':
           description = `Be sure to understand if the ${question.criterion}() method changes it's target "in place" or not.`
           break;
+        case 'no_such':
+          description = 'There is no such method or property of that name for this object.'
+          break;
         case 'operation':
           description = `The ${question.criterion}() method doesn't operate that way.`
           break;
@@ -111,11 +114,11 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
 
   //
   const makeStudyRows = (data) => {
-    console.log("makeStudyRows")
+    //console.log("makeStudyRows")
     return Object.entries(data).map(item => {
       const [key,val] = item;
       const {incorrect} = val;
-      console.log(key," incorrect:",incorrect);
+      //console.log(key," incorrect:",incorrect);
       return incorrect && (
         <div key={key} className="review-topic-container">
           <h3 className="pill">{key}</h3>
