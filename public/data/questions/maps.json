@@ -45,7 +45,7 @@
       {"title":"`true` because values can be added to Maps without using their setter method.", "qid":"4014", "topics":["intent"]},
       {"title":"`false` because the correct syntax is `m.has([2])`", "qid":"4015"}
     ],
-    "actual":"4015",
+    "actual":"4012",
     "category":"quiz",
     "criterion":"has",
     "type":"radio"

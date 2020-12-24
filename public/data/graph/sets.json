@@ -1,0 +1,26 @@
+{
+  "meta":{
+    "graph_id":"1"
+  },
+  "module_maps":{
+    "title":"JS Sets",
+    "questions": [
+      {"id":"set_1", "next":"set_2"},
+      {"id":"set_2", "next":"set_3"},
+      {"id":"set_3", "next":"set_4"},
+      {"id":"set_4", "next":"set_5"},
+      {"id":"set_5", "next":"set_6"},
+      {"id":"set_6", "next":"set_7"},
+      {"id":"set_7", "next":"set_8"},
+      {"id":"set_8", "next":"set_9"},
+      {"id":"set_9"}
+    ],
+    "next":"module_final"
+  },
+  "module_final":{
+    "title":"What's Next",
+    "questions": [
+      { "id":"quiz_results"}
+    ]
+  }
+}

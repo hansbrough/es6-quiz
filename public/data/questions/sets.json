@@ -1,0 +1,123 @@
+{
+  "set_1":{
+    "title":"Why use a `Set` vs. an `Object` or `Map`?",
+    "labels":[
+      {"title":"A `Set` does not contain any keys by default. It only contains what is explicitly put into it. Objects contain default keys that could collide with your own keys if you're not careful.", "qid":"5001"},
+      {"title":"The number of items in a `Set` is easily retrieved from its size property.", "qid":"5002"},
+      {"title":"A `Set` enforces storage of *unique* values of any type, whether primitive values or object references.", "qid":"5003"},
+      {"title":"All of the above.", "qid":"5004"}
+    ],
+    "actual":"5004",
+    "category":"quiz",
+    "criterion":"benefits",
+    "type":"radio"
+  },
+  "set_2":{
+    "title":"Given: `const s = new Set([ 'cat', 'dog', 'bird' ])`\n  \n How do you get the length of Set `s`?",
+    "labels":[
+      {"title":"`s.length` use the built in length property.", "qid":"5005", "topics":["no_such"]},
+      {"title":"`s.size()` use the built in size method.", "qid":"5006", "topics":["no_such"]},
+      {"title":"`s.size` use the built in size property.", "qid":"5007"},
+      {"title":"`const len = s.reduce((acc, current) => current + acc);` write a simple reducer.", "qid":"5008", "topics":["complicated"]}
+    ],
+    "actual":"5007",
+    "category":"quiz",
+    "criterion":"size",
+    "type":"radio"
+  },
+  "set_3":{
+    "title":"Given: `const s = new Set([ 'cat', 'dog' ])`\n  \n How might you best add a new entry to `s`?",
+    "labels":[
+      {"title":"`s.set(3,'bird')`", "qid":"5009", "topics":["syntax"]},
+      {"title":"`s.add('bird')`", "qid":"5010"},
+      {"title":"`s[3] = 'bird'`", "qid":"5011", "topcs":["intent"]}
+    ],
+    "actual":"5009",
+    "category":"quiz",
+    "criterion":"add",
+    "type":"radio"
+  },
+  "set_4":{
+    "title":"Given: `const s = new Map([ 'cat' ]); s[2] = 'dog'`\n  \n What is the return value for `s.has(2)`?",
+    "labels":[
+      {"title":"`false` because the second index was added incorrectly and as a result is not accessible by the `has()` method.", "qid":"5012"},
+      {"title":"`false` because the correct syntax is `s.has('dog')`", "qid":"5013","topics":["syntax"]},
+      {"title":"`true` because values can be added to a `Set` without using their setter method.", "qid":"5014", "topics":["intent"]},
+      {"title":"`false` because the correct syntax is `s.has([2])`", "qid":"5015"}
+    ],
+    "actual":"5012",
+    "category":"quiz",
+    "criterion":"has",
+    "type":"radio"
+  },
+  "set_5":{
+    "title":"What method will remove *all* entries from a Set?",
+    "labels":[
+      {"title":"`remove()`", "qid":"5020", "topics":["no_such"]},
+      {"title":"`clear()`", "qid":"5021"},
+      {"title":"`reset()`", "qid":"5022", "topics":["no_such"]},
+      {"title":"`delete()`", "qid":"5023", "topics":["different"]}
+    ],
+    "actual":"5021",
+    "category":"quiz",
+    "criterion":"clear",
+    "type":"radio"
+  },
+  "set_6":{
+    "title":"What method will remove a given entry from a Set?",
+    "labels":[
+      {"title":"`remove()`", "qid":"5024", "topics":["no_such"]},
+      {"title":"`clear()`", "qid":"5025", "topics":["different"]},
+      {"title":"`reset()`", "qid":"5026", "topics":["no_such"]},
+      {"title":"`delete()`", "qid":"5027"}
+    ],
+    "actual":"5027",
+    "category":"quiz",
+    "criterion":"delete",
+    "type":"radio"
+  },
+  "set_7":{
+    "title":"Given: `const s = new Set(['cat', 'dog'] ])`\n  \nWhat value will `s.entries()` return?",
+    "labels":[
+      {"title":"`[ 'cat', 'dog' ]` the array of `Set` values.", "qid":"5028", "topics":["return"]},
+      {"title":"An iterator which can be used to get the Set values.", "qid":"5029"},
+      {"title":"`{cat:'cat', dog:'dog'}` an object of values found in the Set.", "qid":"5030", "topics":["return"]},
+      {"title":"None of the above.", "qid":"5031"}
+    ],
+    "actual":"5029",
+    "category":"quiz",
+    "criterion":"entries",
+    "type":"radio"
+  },
+  "set_8":{
+    "title":"Given: `const s = new Set(['cat', 'dog'])`\n  \nHow can you extract values from `const iterator = s.entries();` ?",
+    "labels":[
+      {"title":"`let vals = [...iterator].map((idx, val) => val);` spread the iterator and run the `map` method.", "qid":"5032"},
+      {"title":"`for(let [idx, val] of iterator) { console.log(val) }` use a 'for-of' loop on the iterator.", "qid":"5033"},
+      {"title":"`iterator.forEach(val => console.log(val))` use the iterators built in 'forEach' method.", "qid":"5034", "topics":["no-such"]},
+      {"title":"Only the 'spread' and 'for-of' options.", "qid":"5035"}
+    ],
+    "actual":"5033",
+    "category":"quiz",
+    "criterion":"entries",
+    "type":"radio"
+  },
+  "set_9":{
+    "title":"Given: `const s = new Set([ 'cat', 'dog'] ])`\n  \nWhat is the best way to iterate over the values of Set items?",
+    "labels":[
+      {"title":"`s.forEach(val => console.log(val))`", "qid":"5036"},
+      {"title":"`s.forEach((key, val) => console.log(val))`", "qid":"5037", "topics":["syntax"]},
+      {"title":"`Set.forEach(s, (val) => console.log(val))`", "qid":"5038", "topics":["syntax"]}
+    ],
+    "actual":"5036",
+    "category":"quiz",
+    "criterion":"forEach",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"JS Sets Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  }
+
+}

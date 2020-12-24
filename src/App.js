@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import ObjectsQuiz from "./components/objectsQuiz";
 import ArraysQuiz from "./components/arraysQuiz";
 import MapsQuiz from "./components/mapsQuiz";
+import SetsQuiz from "./components/setsQuiz";
 import FundamentalsQuiz from "./components/fundamentalsQuiz";
 
 /*--Styles--*/
@@ -23,6 +24,7 @@ function App() {
           <NavLink exact to="/arrays" activeClassName="active">Arrays</NavLink>
           <NavLink exact to="/objects" activeClassName="active">Objects</NavLink>
           <NavLink exact to="/maps" activeClassName="active">Maps</NavLink>
+          <NavLink exact to="/sets" activeClassName="active">Sets</NavLink>
           <NavLink exact to="/fundamentals" activeClassName="active">Fundamentals</NavLink>
         </nav>
       </header>
@@ -34,6 +36,7 @@ function App() {
             <Route exact path="/arrays" component={ArraysQuiz} />
             <Route exact path="/objects" component={ObjectsQuiz} />
             <Route exact path="/maps" component={MapsQuiz} />
+            <Route exact path="/sets" component={SetsQuiz} />
             <Route exact path="/fundamentals" component={FundamentalsQuiz} />
           </Switch>
         )}
