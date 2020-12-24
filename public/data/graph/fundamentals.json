@@ -7,9 +7,9 @@
     "questions": [
       {"id":"fundamental_1", "next":"fundamental_2"},
       {"id":"fundamental_2", "next":"fundamental_3"},
-      {"id":"fundamental_3", "next":"fundamental_4"},
-      {"id":"fundamental_4", "next":"fundamental_5"},
-      {"id":"fundamental_5"}
+      {"id":"fundamental_3", "next":"fundamental_5"},
+      {"id":"fundamental_5", "next":"fundamental_6"},
+      {"id":"fundamental_6"}
     ],
     "next":"module_final"
   },

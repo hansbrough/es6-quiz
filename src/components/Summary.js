@@ -89,6 +89,9 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
         case 'operation':
           description = `The ${question.criterion}() method doesn't operate that way.`
           break;
+        case 'primitive_types':
+          description = 'Be sure to understand the difference between a primitive data type and their object wrapper equivalents.';
+          break;
         case 'return':
           description = `Take a second look at the expected return value for the ${question.criterion}() method.`
           break;

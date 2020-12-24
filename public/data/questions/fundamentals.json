@@ -38,42 +38,42 @@
     "type":"radio"
   },
   "fundamental_4":{
-    "title":"",
+    "title":"Which of the following are exclusively primitive *data types*?",
     "labels":[
-      {"title":"1", "qid":"2012"},
-      {"title":"2", "qid":"2013"},
-      {"title":"3", "qid":"2014"},
-      {"title":"4", "qid":"2015"}
+      {"title":"`number`, `bigint`, `boolean`, `undefined`, `null`", "qid":"3012"},
+      {"title":"`string`, `number`, `bigint`, `boolean`, `undefined`, `symbol`", "qid":"3013"},
+      {"title":"`Object`, `Array`, `Map`, `Set`, `Function`, `Date`", "qid":"3014", "topics":["primitive_types"]},
+      {"title":"`Object`, `Array`, `Map`, `Set`, `boolean`, `undefined`", "qid":"3015", "topics":["primitive_types"]}
     ],
-    "actual":"2015",
+    "actual":"3013",
     "category":"quiz",
-    "criterion":"assign",
+    "criterion":"primitives",
     "type":"radio"
   },
   "fundamental_5":{
-    "title":"",
+    "title":"What is the difference between `string` and `String`, `boolean` and `Boolean`, `symbol` and `Symbol` etc. ?",
     "labels":[
-      {"title":"1", "qid":"2016"},
-      {"title":"2", "qid":"2017", "topics":["reference"]},
-      {"title":"3", "qid":"2018", "topics":["reference"]},
-      {"title":"None of the above.", "qid":"2019"}
+      {"title":"The lowercase version is a primitive data type with no methods while the uppercase version is a wrapper object with methods.", "qid":"3016"},
+      {"title":"There is no difference. Both can be used interchangeably.", "qid":"3017", "topics":["primitive_types"], "next":"fundamental_4"},
+      {"title":"The lowercase version is the value assigned by the uppercase version.", "qid":"3018", "topics":["primitive_types"], "next":"fundamental_4"},
+      {"title":"None of the above.", "qid":"3019", "next":"fundamental_4"}
     ],
-    "actual":"2016",
+    "actual":"3016",
     "category":"quiz",
-    "criterion":"assign",
+    "criterion":"primitives",
     "type":"radio"
   },
   "fundamental_6":{
-    "title":"",
+    "title":"Given `let a = true;` and `let b = new Boolean(true);`  \n  \nWhat will `typeof a` and `typeof b` return?",
     "labels":[
-      {"title":"", "qid":"3000"},
-      {"title":"", "qid":"3000"},
-      {"title":"", "qid":"3000"},
-      {"title":"", "qid":"3000"}
+      {"title":"Both will return the string `boolean` since both pass in a boolean argument.", "qid":"3020", "topics":["primitive_types"]},
+      {"title":"Both will return the string `object`", "qid":"3021"},
+      {"title":"`boolean` and `object` respectively because the first is a primative value and the second is an instance of the Boolean constructor.", "qid":"3022"},
+      {"title":"`object` and `boolean` respectively because `new Boolean()` always returns a primitive value.", "qid":"3023"}
     ],
-    "actual":"3000",
+    "actual":"3022",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"primitives",
     "type":"radio"
   },
   "fundamental_7":{
@@ -86,7 +86,7 @@
     ],
     "actual":"3000",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"TBD",
     "type":"radio"
   },
   "fundamental_8":{
@@ -99,7 +99,7 @@
     ],
     "actual":"3000",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"TBD",
     "type":"radio"
   },
   "fundamental_9":{
@@ -112,7 +112,7 @@
     ],
     "actual":"3000",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"TBD",
     "type":"radio"
   },
   "fundamental_10":{
@@ -125,7 +125,7 @@
     ],
     "actual":"3000",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"TBD",
     "type":"radio"
   },
   "fundamental_100":{
@@ -138,7 +138,7 @@
     ],
     "actual":"3000",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"TBD",
     "type":"radio"
   },
   "fundamental_101":{
@@ -151,11 +151,11 @@
     ],
     "actual":"3000",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"TBD",
     "type":"radio"
   },
   "quiz_results":{
-    "title":"JS Object Methods Quiz Summary",
+    "title":"JS Fundamentals Quiz Summary",
     "type":"summary",
     "qid":"10000"
   }
