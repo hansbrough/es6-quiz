@@ -3,6 +3,7 @@
 */
 import React, { useEffect, useState } from 'react';
 import DecisionTree from 'question-tree-core';
+//import DecisionTree from "../utils/index";// or debug w/the unpackaged files
 import ReactMarkdown from 'react-markdown';
 
 import Summary from './Summary';

@@ -12,6 +12,16 @@
       {"id":"fundamental_5", "next":"fundamental_6"},
       {"id":"fundamental_6"}
     ],
+    "next":"module_symbols"
+  },
+  "module_symbols":{
+    "title":"JS Symbols Concepts",
+    "topic":"Symbol",
+    "questions": [
+      {"id":"symbol_1", "next":"symbol_2"},
+      {"id":"symbol_2", "next":"symbol_3"},
+      {"id":"symbol_3"}
+    ],
     "next":"module_final"
   },
   "module_final":{

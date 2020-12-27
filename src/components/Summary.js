@@ -8,19 +8,21 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
   const unique = (categories, accumulator={}) => {
     //console.log("unique");
     categories && categories.forEach(category => {
-      //console.log(".category:",category);
+      console.log(".category:",category);
+      let bucketName;
       for (const [key, arr] of Object.entries(category)) {
         //console.log(`..${key}: ${arr}`);
         arr.forEach(item => {
-          //console.log("...item.criterion:",item.criterion)
-          if(!accumulator[item.criterion]) {
-            accumulator[item.criterion] = {}
+          bucketName = `${item.moduleTopic.trim().toLowerCase().replace(' ','_')}_${item.criterion.toLowerCase()}`;
+          //console.log("...bucketName:",bucketName)
+          if(!accumulator[bucketName]) {
+            accumulator[bucketName] = {}
           }
-
-          if(!accumulator[item.criterion][key]) {
-            accumulator[item.criterion][key] = [item];
+          accumulator[bucketName]['title'] = `${item.moduleTopic} ${item.criterion}`
+          if(!accumulator[bucketName][key]) {
+            accumulator[bucketName][key] = [item];
           } else {
-            accumulator[item.criterion][key].push(item)
+            accumulator[bucketName][key].push(item)
           }
         });
       }
@@ -30,13 +32,14 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
 
   //
   const makeSummaryRows = (data) => {
+    //console.log("makeSummaryRows data:",data);
     return Object.entries(data).map(item => {
       const [key,val] = item;
-      const {correct=[], incorrect=[]} = val;
+      const {correct=[], incorrect=[], title=''} = val;
       const knowIt = correct.length > 0 && incorrect.length === 0;
       return (
         <tr key={key}>
-          <td>{key}</td>
+          <td>{title}</td>
           <td>{knowIt && <img src="/mini-checkcircle.svg" alt="check mark" />}</td>
           <td>{correct.length}</td>
           <td>{incorrect.length}</td>
@@ -120,11 +123,11 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
     //console.log("makeStudyRows")
     return Object.entries(data).map(item => {
       const [key,val] = item;
-      const {incorrect} = val;
+      const {incorrect, title} = val;
       //console.log(key," incorrect:",incorrect);
       return incorrect && (
         <div key={key} className="review-topic-container">
-          <h3 className="pill">{key}</h3>
+          <h3 className="pill">{title}</h3>
           {incorrect && incorrect.map(item => {
             return (
               <div className="question-review-container">

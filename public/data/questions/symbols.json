@@ -1,0 +1,46 @@
+{
+  "symbol_1":{
+    "title":"What is the benefit of using the Symbol type?",
+    "labels":[
+      {"title":"Holds key-value pairs and remembers the original insertion order of the keys. ", "qid":"6001","topics":["intent"]},
+      {"title":"Stores unique values of any type, whether primitive values or object references.", "qid":"6002","topics":["intent"]},
+      {"title":"Creates a new unique value when called. They can used in place of strings or numbers meant to be unique in a system.", "qid":"6003"},
+      {"title":"Represents the eventual completion (or failure) of an asynchronous operation and its resulting value.", "qid":"6004","topics":["intent"]}
+    ],
+    "actual":"6003",
+    "category":"quiz",
+    "criterion":"benefit",
+    "type":"radio"
+  },
+  "symbol_2":{
+    "title":"What is the correct syntax to create a new `Symbol`?",
+    "labels":[
+      {"title":"`const s = new Symbol()` initialize an instance with the `new` keyword.", "qid":"6005","topics":["syntax"]},
+      {"title":"`const s = Symbol('Sym1')` the `new` keyword is purposely not supported for JS Symbols.", "qid":"6006"},
+      {"title":"`const s = Symbol.add('Sym1')` which adds a new Symbol to the global registry.", "qid":"6007", "topics":["syntax"]},
+      {"title":"`const s = Symbol.create('Sym1')` which creates a new Symbol", "qid":"6008", "topics":["syntax"]}
+    ],
+    "actual":"6006",
+    "category":"quiz",
+    "criterion":"instantiation",
+    "type":"radio"
+  },
+  "symbol_3":{
+    "title":"Given: `const s = Symbol('hello')`\n  \n How would you access the Symbols descriptive string 'hello'?",
+    "labels":[
+      {"title":"`Symbol.get('description')`", "qid":"6009", "topics":["syntax"]},
+      {"title":"`s.description`", "qid":"6010"},
+      {"title":"`s.description()`", "qid":"6011", "topics":["syntax"]}
+    ],
+    "actual":"6010",
+    "category":"quiz",
+    "criterion":"description",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"JS Symbols Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  }
+
+}

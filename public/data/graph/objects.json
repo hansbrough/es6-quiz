@@ -4,6 +4,7 @@
   },
   "module_objects":{
     "title":"JS Object Concepts",
+    "topic":"Object",
     "questions": [
       {"id":"object_1", "next":"object_2"},
       {"id":"object_2", "next":"object_3"},

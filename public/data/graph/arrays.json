@@ -4,6 +4,7 @@
   },
   "module_array":{
     "title":"JS Array Concepts",
+    "topic":"Array",
     "questions": [
       {"id":"array_1", "next":"array_13"},
       {"id":"array_2", "next":"array_3"},

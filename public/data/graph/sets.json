@@ -2,8 +2,9 @@
   "meta":{
     "graph_id":"1"
   },
-  "module_maps":{
+  "module_sets":{
     "title":"JS Sets",
+    "topic":"Set",
     "questions": [
       {"id":"set_1", "next":"set_2"},
       {"id":"set_2", "next":"set_3"},

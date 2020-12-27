@@ -6,7 +6,9 @@ import ObjectsQuiz from "./components/objectsQuiz";
 import ArraysQuiz from "./components/arraysQuiz";
 import MapsQuiz from "./components/mapsQuiz";
 import SetsQuiz from "./components/setsQuiz";
+import SymbolsQuiz from "./components/symbolsQuiz";
 import FundamentalsQuiz from "./components/fundamentalsQuiz";
+import OthersQuiz from "./components/othersQuiz";
 
 /*--Styles--*/
 import './App.css';
@@ -25,7 +27,7 @@ function App() {
           <NavLink exact to="/objects" activeClassName="active">Objects</NavLink>
           <NavLink exact to="/maps" activeClassName="active">Maps</NavLink>
           <NavLink exact to="/sets" activeClassName="active">Sets</NavLink>
-          <NavLink exact to="/fundamentals" activeClassName="active">Fundamentals</NavLink>
+          <NavLink exact to="/other" activeClassName="active">Other</NavLink>
         </nav>
       </header>
       <Route render={(props) => {
@@ -37,7 +39,9 @@ function App() {
             <Route exact path="/objects" component={ObjectsQuiz} />
             <Route exact path="/maps" component={MapsQuiz} />
             <Route exact path="/sets" component={SetsQuiz} />
+            <Route exact path="/symbols" component={SymbolsQuiz} />
             <Route exact path="/fundamentals" component={FundamentalsQuiz} />
+            <Route exact path="/other" component={OthersQuiz} />
           </Switch>
         )}
       }

@@ -32,7 +32,7 @@
       {"title":"`s.add('bird')`", "qid":"5010"},
       {"title":"`s[3] = 'bird'`", "qid":"5011", "topcs":["intent"]}
     ],
-    "actual":"5009",
+    "actual":"5010",
     "category":"quiz",
     "criterion":"add",
     "type":"radio"

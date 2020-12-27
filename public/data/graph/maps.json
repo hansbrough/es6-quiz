@@ -4,6 +4,7 @@
   },
   "module_maps":{
     "title":"JS Maps",
+    "topic":"Map",
     "questions": [
       {"id":"map_1", "next":"map_2"},
       {"id":"map_2", "next":"map_3"},
