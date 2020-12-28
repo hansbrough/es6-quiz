@@ -9,11 +9,11 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
     //console.log("unique");
     categories && categories.forEach(category => {
       console.log(".category:",category);
-      let bucketName;
+      //let bucketName;
       for (const [key, arr] of Object.entries(category)) {
         //console.log(`..${key}: ${arr}`);
         arr.forEach(item => {
-          bucketName = `${item.moduleTopic.trim().toLowerCase().replace(' ','_')}_${item.criterion.toLowerCase()}`;
+          let bucketName = `${item.moduleTopic.trim().toLowerCase().replace(' ','_')}_${item.criterion.toLowerCase()}`;
           //console.log("...bucketName:",bucketName)
           if(!accumulator[bucketName]) {
             accumulator[bucketName] = {}

@@ -22,6 +22,17 @@
       {"id":"symbol_2", "next":"symbol_3"},
       {"id":"symbol_3"}
     ],
+    "next":"module_promise"
+  },
+  "module_promise": {
+    "title":"JS Promises",
+    "topic":"Promise",
+    "questions": [
+      {"id":"promise_1", "next":"promise_2"},
+      {"id":"promise_2", "next":"promise_3"},
+      {"id":"promise_3", "next":"promise_4"},
+      {"id":"promise_4"}
+    ],
     "next":"module_final"
   },
   "module_final":{

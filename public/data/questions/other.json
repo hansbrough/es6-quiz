@@ -114,6 +114,54 @@
     "criterion":"description",
     "type":"radio"
   },
+  "promise_1":{
+    "title":"Which of the below is an example of a working Promise?",
+    "labels":[
+      {"title":"`let p = new Promise((resolve, reject) => resolve(10) )`", "qid":"7000"},
+      {"title":"`let p = new Promise(resolve(10))`", "qid":"7001", "topics":["syntax"]},
+      {"title":"`let p = new Promise(() => return 10 )`", "qid":"7002", "topics":["syntax"]}
+    ],
+    "actual":"7000",
+    "category":"quiz",
+    "criterion":"create",
+    "type":"radio"
+  },
+  "promise_2":{
+    "title":"Given: `let p = new Promise((resolve, reject) => resolve(10) )`\n  \n How would you set up chaining to return `30`?",
+    "labels":[
+      {"title":"`p(result => result * 3);`", "qid":"7003", "topics":["syntax"]},
+      {"title":"`p.then(result => result * 3);`", "qid":"7004"},
+      {"title":"`p.resolve(result => result * 3)`", "qid":"7005", "topics":["syntax"]}
+    ],
+    "actual":"7004",
+    "category":"quiz",
+    "criterion":"then",
+    "type":"radio"
+  },
+  "promise_3":{
+    "title":"Given: `let p1 = new Promise(resolve => resolve(10));`\n  \n `let p2 = new Promise(resolve => resolve(20));`\n  \n Use `Promise.all` to show the results.",
+    "labels":[
+      {"title":"`Promise.all(p1, p2).then(results => console.log(results))`", "qid":"7006", "topics":["syntax"]},
+      {"title":"`Promise.all(p1, p2){results => console.log(results)}`", "qid":"7007", "topics":["syntax"]},
+      {"title":"`Promise.all([p1, p2]).then(results => console.log(results))`", "qid":"7008"}
+    ],
+    "actual":"7008",
+    "category":"quiz",
+    "criterion":"all",
+    "type":"radio"
+  },
+  "promise_4":{
+    "title":"Given: `let p1 = new Promise(resolve => resolve(10));`\n  \n `let p2 = new Promise((resolve, reject) => reject('Error!'));`\n  \n What will `Promise.all([p1, p2]).then(result => console.log(result)).catch(err=>console.log(err))` return?",
+    "labels":[
+      {"title":"`10` and then `Error!` because the first promise resolves and then the second promise rejects.", "qid":"7009", "topics":["syntax"]},
+      {"title":"`Error!` because the `all()` return promise is rejected if any of it's input promises are rejected.", "qid":"7010", "topics":["syntax"]},
+      {"title":"`10` because the first promise returns first.", "qid":"7011"}
+    ],
+    "actual":"7010",
+    "category":"quiz",
+    "criterion":"all",
+    "type":"radio"
+  },
   "quiz_results":{
     "title":"JS Quiz Summary",
     "type":"summary",
