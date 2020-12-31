@@ -76,6 +76,31 @@
     "criterion":"primitives",
     "type":"radio"
   },
+  "fundamental_7":{
+    "title":"Given:  \n  \n`if(1) {`  \n  \n&emsp;`console.log(myNum)`  \n  \n&emsp;`let myNum = 5`  \n  \n `}`  \n  \n  what value is logged?",
+    "labels":[
+      {"title":"5", "qid":"3024", "topics":["hoisting"]},
+      {"title":"`Uncaught ReferenceError: Cannot access ... before initialization.` because `let` and `const` require 'declation' and 'initialization' before becoming available for use (unlike when using the `var` keyword.).", "qid":"3025"},
+      {"title":"`undefined` because in js initializations and declarations are hoisted.", "qid":"3026", "topics":["hoisting"]}
+    ],
+    "actual":"3025",
+    "category":"quiz",
+    "criterion":"hoisting",
+    "type":"radio"
+  },
+  "fundamental_8":{
+    "title":"Given:  \n  \n`var x = 1;`  \n  \n`var x = 2;`  \n  \n `let x = 3;`  \n  \n  what value is logged?",
+    "labels":[
+      {"title":"`3` because it is the last value assigned to `x` by the `let` statement.", "qid":"3027", "topics":["declaration"]},
+      {"title":"`Uncaught SyntaxError: Identifier 'x' has already been declared` because the `let` keyword does not allow redeclaration.", "qid":"3028"},
+      {"title":"`Uncaught SyntaxError: Identifier 'x' has already been declared` because the `var` keyword does not allow redeclaration.", "qid":"3029", "topics":["declaration"]},
+      {"title":"`undefined` because redeclaration in js is not allowed.", "qid":"3030", "topics":["declaration"]}
+    ],
+    "actual":"3028",
+    "category":"quiz",
+    "criterion":"redeclaration",
+    "type":"radio"
+  },
   "symbol_1":{
     "title":"What is the benefit of using the Symbol type?",
     "labels":[
@@ -160,6 +185,203 @@
     "actual":"7010",
     "category":"quiz",
     "criterion":"all",
+    "type":"radio"
+  },
+  "object_literal_1":{
+    "title":"Given: `let x = 1;`\n  \n `let y = { z: 2, x };` \n  \n What will `console.log(y)` output?",
+    "labels":[
+      {"title":"`Syntax Error` because the `x` property is not assigned a value.", "qid":"8000"},
+      {"title":"`{z:2, x:1}`", "qid":"8001"},
+      {"title":"`{z:2}` because `x` will be ignored since it is not given a value.", "qid":"8002"}
+    ],
+    "actual":"8001",
+    "category":"quiz",
+    "criterion":"property shorthand",
+    "type":"radio"
+  },
+  "object_literal_2":{
+    "title":"Given `let prefix = 'last'`\n  \nHow might you create the computed object property name 'last name' on an object named 'person'?",
+    "labels":[
+      {"title":"`let person = {[prefix+' name']:'john'}`", "qid":"8003"},
+      {"title":"`let person = {[prefix+' name']='john'}`", "qid":"8004", "topics":["syntax_language_feature"]},
+      {"title":"`let person = {prefix + ' name':'john'}`", "qid":"8005", "topics":["syntax_language_feature"]}
+    ],
+    "actual":"8003",
+    "category":"quiz",
+    "criterion":"computed property name",
+    "type":"radio"
+  },
+  "object_literal_3":{
+    "title":"Given: \n  \n`let x = {`\n  \n&emsp;`restart: function() {`\n  \n&emsp;`console.log('restarting...');`\n  \n `}};`\n  \n How can you more concisely define the 'restart' method?",
+    "labels":[
+      {"title":"It is not possible to be more concise", "qid":"8006"},
+      {"title":"`{`\n  \n&emsp;`restart() => console.log('restarting...');`\n  \n`}`", "qid":"8007", "topics":["syntax_language_feature"]},
+      {"title":"`{`\n  \n&emsp;`restart() {`\n  \n&emsp;`console.log('restarting...');`\n  \n&emsp;`}`\n  \n `};`", "qid":"8008"}
+    ],
+    "actual":"8008",
+    "category":"quiz",
+    "criterion":"concise method syntax",
+    "type":"radio"
+  },
+  "rest_parameters_1":{
+    "title":"Given: \n  \n `function fn(a, b, ...args) {`\n  \n&emsp;`console.log(args)`\n  \n }\n  \n What will `fn(1,2,3,4)` log?",
+    "labels":[
+      {"title":"`undefined` because the syntax is incorrect.", "qid":"9000", "topics":["intent_language_feature"]},
+      {"title":"`3` because it is the third argument.", "qid":"9001", "topics":["intent_language_feature"]},
+      {"title":"`[3, 4]` because these are the rest of the paramters.", "qid":"9002"},
+      {"title":"`3, 4` because these are the rest of the paramters.", "qid":"9003"}
+    ],
+    "actual":"9002",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "rest_parameters_2":{
+    "title":"Given: \n  \n `function fn(a, b, ...args) {`\n  \n&emsp;`return args`\n  \n }\n  \n What will `fn(1,2)` return?",
+    "labels":[
+      {"title":"`undefined` because there are only two arguments so undefined is returned.", "qid":"9004", "topics":["operation_langauge_feature"]},
+      {"title":"`[]` because there are only two arguments so an empty array is returned.", "qid":"9005"},
+      {"title":"A syntax error is thrown because not enough arguments are supplied.", "qid":"9006", "topics":["operation_langauge_feature"]},
+      {"title":"An iterator is returned which can be used to get the arguments.", "qid":"9007", "topics":["return_langauge_feature"]}
+    ],
+    "actual":"9005",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "rest_parameters_3":{
+    "title":"Given: \n  \n `function fn(a, ...args, b) {`\n  \n&emsp;`return args`\n  \n }\n  \n What will `fn(1,2)` return?",
+    "labels":[
+      {"title":"`2` because it is the second argument.", "qid":"9008", "topics":["syntax_language_feature"]},
+      {"title":"`[2]` because it is the second argument.", "qid":"9009", "topics":["syntax_language_feature"]},
+      {"title":"`Uncaught SyntaxError: Rest parameter must be last formal parameter`", "qid":"9010"}
+    ],
+    "actual":"9010",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "rest_parameters_4":{
+    "title":"Given: \n  \n `function fn(a, ...b, ...c) {`\n  \n&emsp;`return c`\n  \n }\n  \n What will `fn(1,2,3,4)` return?",
+    "labels":[
+      {"title":"`Uncaught SyntaxError: Rest parameter must be last formal parameter`", "qid":"9011"},
+      {"title":"`[3, 4]` because these are the rest of the paramters not assigned to previous arguments.", "qid":"9012", "topics":["syntax_language_feature"]},
+      {"title":"`[]` because the rest params `[2,3,4]` are assigned to `b`", "qid":"9013", "topics":["syntax_language_feature"]}
+    ],
+    "actual":"9011",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "rest_parameters_5":{
+    "title":"Given: \n  \n `function fn(a, b, ...[c,d]) {`\n  \n&emsp;`return [c,d]`\n  \n }\n  \n What will `fn(1,2,3,4,5,6)` return?",
+    "labels":[
+      {"title":"`[3, 4, 5, 6]` because the rest params are assinged to c and d.", "qid":"9014"},
+      {"title":"`[3, 4]` because the rest params are destructured and the 3rd and 4th items are assigned to c, d respectively.", "qid":"9015"},
+      {"title":"An `Uncaught SyntaxError` is thrown because inline destructuring of params is not supported.", "qid":"9016"}
+    ],
+    "actual":"9015",
+    "category":"quiz",
+    "criterion":"destructuring",
+    "type":"radio"
+  },
+  "rest_parameters_6":{
+    "title":"What is the difference between the function `arguments` property and 'rest parameters'?",
+    "labels":[
+      {"title":"The `arguments` prop is array like' while 'rest parameters' are in a true array which means Array methods can be applied directly.", "qid":"9017"},
+      {"title":"The `arguments` object has additional functionality specific to itself (like the callee property).", "qid":"9018"},
+      {"title":"The `...restParam` bundles all the extra parameters into a single array, whereas the arguments object contains all of the parameters.", "qid":"9019"},
+      {"title":"All of the above.", "qid":"9020"},
+      {"title":"None of the above.", "qid":"9021"}
+    ],
+    "actual":"9020",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "spread_1":{
+    "title":"`const odd = [1,3,5];`\n  \nWhat is the output of `console.log([2,4,6, ...odd]);`",
+    "labels":[
+      {"title":"`[2, 4, 6, 1, 3, 5]` because `const odd` is 'spread' into the new array.", "qid":"9000"},
+      {"title":"`[2, 4, 6, [1, 3, 5]]` because `const odd` is added to the new array.", "qid":"9001"},
+      {"title":"An `Uncaught SyntaxError` is thrown because 'spreading' inside an array is not supported.", "qid":"9002"}
+    ],
+    "actual":"9000",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "spread_2":{
+    "title":"`const odd = [1,3,5];`\n  \nWhat is the output of `console.log([2,4,6, ...odd, 7,8]);`",
+    "labels":[
+      {"title":"`[2, 4, 6, [1, 3, 5], 7, 8]` because `const odd` is added to the new array.", "qid":"9003"},
+      {"title":"`[2, 4, 6, 1, 3, 5, 7, 8]` because `const odd` is 'spread' into the new array.", "qid":"9004"},
+      {"title":"`Uncaught SyntaxError: Spread operator must be last formal parameter`", "qid":"9005"}
+    ],
+    "actual":"9004",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "spread_3":{
+    "title":"Given:\n  \n`let scores = [80, 70, 90];`\n  \n`let copiedScores = [...scores];`\n  \n`scores.pop()`\n  \nWhat is value of copiedScores?",
+    "labels":[
+      {"title":"`[80, 70, 90]` because copying took place by cloning, updating `scores` has no impact on `copiedScores`", "qid":"9006"},
+      {"title":"`[80, 70]` because copying took place by reference.", "qid":"9007", "topics":["cloning"]},
+      {"title":"`[80, 70, 90]` because `pop()` does not mutate the original array.", "qid":"9008", "topics":["cloning"]}
+    ],
+    "actual":"9006",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "spread_4":{
+    "title":"Given:\n  \n`let x = [80, 70, 90];`\n  \n `function sum(a, b, c){ return a + b + c }`\n  \nWhat's the most succint way to invoke `sum()` successfully.",
+    "labels":[
+      {"title":"`sum.apply(null, x);` by using the function object's apply method.", "qid":"9009", "topics":["complicated"]},
+      {"title":"`sum(...x)` with the use of the spread operator.", "qid":"9010"},
+      {"title":"`sum(x)` by directly passing the array.", "qid":"9011"}
+    ],
+    "actual":"9010",
+    "category":"quiz",
+    "criterion":"syntax",
+    "type":"radio"
+  },
+  "destructuring_1":{
+    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20];`\n  \n`}`\n  \n`let [x, y, z] = getScores();`\n  \nWhat are the values of `x` and `z` respectively?",
+    "labels":[
+      {"title":"`10` and `20`", "qid":"9500"},
+      {"title":"`10` and `undefined`", "qid":"9501"},
+      {"title":"`Error Array out of bounds`", "qid":"9502"},
+      {"title":"`10` and `-1`", "qid":"9503"}
+    ],
+    "actual":"9500",
+    "category":"quiz",
+    "criterion":"return",
+    "type":"radio"
+  },
+  "destructuring_2":{
+    "title":"Given:\n  \n\n  \nWhat's ",
+    "labels":[
+      {"title":"", "qid":"9500"},
+      {"title":"", "qid":"9500"},
+      {"title":"", "qid":"9500"}
+    ],
+    "actual":"9500",
+    "category":"quiz",
+    "criterion":"",
+    "type":"radio"
+  },
+  "destructuring_3":{
+    "title":"Given:\n  \n\n  \nWhat's ",
+    "labels":[
+      {"title":"", "qid":"9500"},
+      {"title":"", "qid":"9500"},
+      {"title":"", "qid":"9500"}
+    ],
+    "actual":"9500",
+    "category":"quiz",
+    "criterion":"",
     "type":"radio"
   },
   "quiz_results":{

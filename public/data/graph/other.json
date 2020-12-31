@@ -10,7 +10,8 @@
       {"id":"fundamental_2", "next":"fundamental_3"},
       {"id":"fundamental_3", "next":"fundamental_5"},
       {"id":"fundamental_5", "next":"fundamental_6"},
-      {"id":"fundamental_6"}
+      {"id":"fundamental_6", "next":"fundamental_7"},
+      {"id":"fundamental_7"}
     ],
     "next":"module_symbols"
   },
@@ -32,6 +33,46 @@
       {"id":"promise_2", "next":"promise_3"},
       {"id":"promise_3", "next":"promise_4"},
       {"id":"promise_4"}
+    ],
+    "next":"module_object_literal"
+  },
+  "module_object_literal": {
+    "title":"JS Object Literal Extensions",
+    "topic":"Object Literal",
+    "questions": [
+      {"id":"object_literal_1", "next":"object_literal_2"},
+      {"id":"object_literal_2", "next":"object_literal_3"},
+      {"id":"object_literal_3"}
+    ],
+    "next":"module_rest_parameters"
+  },
+  "module_rest_parameters": {
+    "title":"JS Rest Parameters",
+    "topic":"Rest Parameters",
+    "questions": [
+      {"id":"rest_parameters_1", "next":"rest_parameters_2"},
+      {"id":"rest_parameters_2", "next":"rest_parameters_3"},
+      {"id":"rest_parameters_3", "next":"rest_parameters_4"},
+      {"id":"rest_parameters_4"}
+    ],
+    "next":"module_spread"
+  },
+  "module_spread": {
+    "title":"JS Spread",
+    "topic":"spread",
+    "questions": [
+      {"id":"spread_1", "next":"spread_2"},
+      {"id":"spread_2", "next":"spread_3"},
+      {"id":"spread_3", "next":"spread_4"},
+      {"id":"spread_4"}
+    ],
+    "next":"module_final"
+  },
+  "module_destructuring": {
+    "title":"JS Spread",
+    "topic":"spread",
+    "questions": [
+      {"id":"destructuring_1"}
     ],
     "next":"module_final"
   },

@@ -50,7 +50,8 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
 
   // given a question object determine 'advice' to return
   const makeQuestionFollowupAdvice = (question) => {
-    //console.log("makeQuestionFollowupAdvice:",question);
+    console.log("makeQuestionFollowupAdvice:",question);
+    let {criterion, moduleTopic} = question;
     const topics = question.labels.find(label => label.qid === question.answerId).topics;
     //console.log("...topics:",topics);
     return topics && topics.map(topic => {
@@ -62,17 +63,22 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
         case 'categorization':
           description = `Learn more about how methods are grouped into categories of similar functionality.`
           break;
+        case 'cloning':
+          description = `The original value(s) were copied by cloning. Be sure to know how a given method copies.`
         case 'complicated':
           description = `The solution may work but is more complicated than necessary.`
           break;
+        case 'declaration':
+          description = 'Be sure to understand how declaration and redeclaration differs between the "var", "let" and "const" keywords.'
+          break;
         case 'deep_cloning':
-          description = `The ${question.criterion}() method doesn't support deep cloning.`
+          description = `The ${criterion}() method doesn't support deep cloning.`
           break;
         case 'different':
           description = `Wrong method. The intent of the method you chose doesn't match the task.`
           break;
         case 'generic':
-          description = `The ${question.criterion}() method is intentially generic. It doesn't require it's 'this' property to be a specific built-in object.`
+          description = `The ${criterion}() method is intentially generic. It doesn't require it's 'this' property to be a specific built-in object.`
           break;
         case 'generic_syntax':
           description = `The syntax to call a built-in object's method generically is: [built in object name].prototype.[method name].call([this ref], args)`;
@@ -80,23 +86,35 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
         case 'hardwired':
           description = `The solution isn't reuasable because it has a hard wired value.`
           break;
+        case 'hoisting':
+          description = 'Be sure to understand the concept of hoisting and how it differs between the  "var", "let" and "const" keywords.'
+          break;
         case 'intent':
-          description = `Take a second look at the intent of the ${question.criterion}() method.`
+          description = `Take a second look at the intent of the ${criterion}() method.`
+          break;
+        case 'intent_language_feature':
+          description = `Take a second look at the intent of the '${moduleTopic}' language feature.`
           break;
         case 'mutation':
-          description = `Be sure to understand if the ${question.criterion}() method changes it's target "in place" or not.`
+          description = `Be sure to understand if the ${criterion}() method changes it's target "in place" or not.`
           break;
         case 'no_such':
           description = 'There is no such method or property of that name for this object.'
           break;
         case 'operation':
-          description = `The ${question.criterion}() method doesn't operate that way.`
+          description = `The ${criterion}() method doesn't operate that way.`
+          break;
+        case 'operation_langauge_feature':
+          description = `The '${moduleTopic}' feature doesn't operate that way.`
           break;
         case 'primitive_types':
           description = 'Be sure to understand the difference between a primitive data type and their object wrapper equivalents.';
           break;
         case 'return':
-          description = `Take a second look at the expected return value for the ${question.criterion}() method.`
+          description = `Take a second look at the expected return value for the ${criterion}() method.`
+          break;
+        case 'return_langauge_feature':
+          description = `Take a second look at the expected return value for the ${moduleTopic} feature.`
           break;
         case 'reference':
           description = `The original value was copied by 'reference'`
@@ -108,7 +126,10 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
           description = `Make sure you know which methods are static. This determines how they are invoked from built in JS objects.`
           break;
         case 'syntax':
-          description = `Review the correct syntax to invoke the ${question.criterion}() method.`
+          description = `Review the correct syntax to invoke the ${criterion}() method.`
+          break;
+        case 'syntax_language_feature':
+          description = `Review the correct syntax to use the '${moduleTopic}' feature.`
           break;
         default:
           description = topic;
