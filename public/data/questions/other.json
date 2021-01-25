@@ -348,40 +348,136 @@
     "type":"radio"
   },
   "destructuring_1":{
-    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20];`\n  \n`}`\n  \n`let [x, y, z] = getScores();`\n  \nWhat are the values of `x` and `z` respectively?",
+    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20];`\n  \n`}`\n  \n`let [x, y, z] = getNumbers();`\n  \nWhat are the values of `x` and `z` respectively?",
     "labels":[
-      {"title":"`10` and `20`", "qid":"9500"},
+      {"title":"`10` and `20`", "qid":"9500", "next":"destructuring_2"},
       {"title":"`10` and `undefined`", "qid":"9501"},
       {"title":"`Error Array out of bounds`", "qid":"9502"},
-      {"title":"`10` and `-1`", "qid":"9503"}
+      {"title":"`10` and `-1`", "qid":"9503", "next":"destructuring_2"}
     ],
-    "actual":"9500",
+    "actual":"9501",
     "category":"quiz",
     "criterion":"return",
     "type":"radio"
   },
   "destructuring_2":{
-    "title":"Given:\n  \n\n  \nWhat's ",
+    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20, 30, 40, 50, 60];`\n  \n`}`\n  \n`let [x, y, z] = getNumbers();`\n  \nWhat are the values of `x`, `y` and `z` respectively?",
     "labels":[
-      {"title":"", "qid":"9500"},
-      {"title":"", "qid":"9500"},
-      {"title":"", "qid":"9500"}
+      {"title":"`10`, `20` and `30`", "qid":"9504"},
+      {"title":"`10`, `20` and `[30, 40, 50, 60]`", "qid":"9505"},
+      {"title":"`40`, `50`, `60`", "qid":"9506"}
     ],
-    "actual":"9500",
+    "actual":"9504",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"return",
     "type":"radio"
   },
   "destructuring_3":{
-    "title":"Given:\n  \n\n  \nWhat's ",
+    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20, 30, 40, 50, 60];`\n  \n`}`\n  \n`let [x, y, ...z] = getNumbers();`\n  \nWhat are the values of `x`, `y` and `z` respectively?",
     "labels":[
-      {"title":"", "qid":"9500"},
-      {"title":"", "qid":"9500"},
-      {"title":"", "qid":"9500"}
+      {"title":"`10`, `20` and `30`", "qid":"9506"},
+      {"title":"`10`, `20` and `[30, 40, 50, 60]`", "qid":"9507"},
+      {"title":"`40`, `50`, `60`", "qid":"9508"}
+    ],
+    "actual":"9507",
+    "category":"quiz",
+    "criterion":"rest syntax",
+    "type":"radio"
+  },
+  "destructuring_4":{
+    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20];`\n  \n`}`\n  \n`let [, , z=0] = getNumbers();`\n  \nWhat is the value `z`?",
+    "labels":[
+      {"title":"`10`", "qid":"9509"},
+      {"title":"`20`", "qid":"9510"},
+      {"title":"`0`", "qid":"9511"}
+    ],
+    "actual":"9511",
+    "category":"quiz",
+    "criterion":"default",
+    "type":"radio"
+  },
+  "destructuring_5":{
+    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20];`\n  \n`}`\n  \n`let [, , ...z] = getNumbers();`\n  \nWhat is the value `z`?",
+    "labels":[
+      {"title":"`10`", "qid":"9512"},
+      {"title":"`[]`", "qid":"9513"},
+      {"title":"`0`", "qid":"9514"}
+    ],
+    "actual":"9513",
+    "category":"quiz",
+    "criterion":"rest syntax",
+    "type":"radio"
+  },
+  "destructuring_6":{
+    "title":"Given:\n  \n`function getNumbers() {`\n  \n&emsp;`return [10, 20, [30, 40]];`\n  \n`}`\n  \nHow to assign each value to it's own variable?",
+    "labels":[
+      {"title":"`let [a, b, c, d] = getNumbers();`", "qid":"9515"},
+      {"title":"`let [a, b, [c, d]] = getNumbers();`", "qid":"9516"},
+      {"title":"`let a, b [c, d] = getNumbers();`", "qid":"9517"}
+    ],
+    "actual":"9516",
+    "category":"quiz",
+    "criterion":"nested",
+    "type":"radio"
+  },
+  "destructuring_7":{
+    "title":"Given:\n  \n`let a = 1;`\n  \n`let b = 2;`\n  \n`[a, b] = [b, a];`\n  \nWhat are the values of `a` and `b` respectively?",
+    "labels":[
+      {"title":"`1` and `2`", "qid":"9518"},
+      {"title":"`2` and `1`", "qid":"9519"},
+      {"title":"`both are undefined`", "qid":"9520"}
+    ],
+    "actual":"9519",
+    "category":"quiz",
+    "criterion":"swapping values",
+    "type":"radio"
+  },
+  "destructuring_8":{
+    "title":"Given:\n  \n`let {a, b} = {a: 1, b: 2};`\n  \nWhat are the values of the `a` and `b` variables?",
+    "labels":[
+      {"title":"`1` and `2`", "qid":"9521"},
+      {"title":"`2` and `1`", "qid":"9522"},
+      {"title":"both are undefined", "qid":"9523"}
+    ],
+    "actual":"9521",
+    "category":"quiz",
+    "criterion":"object literal syntax",
+    "type":"radio"
+  },
+  "destructuring_9":{
+    "title":"Given:\n  \n`let {a:c, b:d} = {a: 1, b: 2};`\n  \nWhat are the values of the `a`, `c` and `d` variables?",
+    "labels":[
+      {"title":"`1` and `2`", "qid":"9524"},
+      {"title":"`2` and `1`", "qid":"9525"},
+      {"title":"`Uncaught ReferenceError: a is not defined` is thrown.", "qid":"9526"}
+    ],
+    "actual":"9526",
+    "category":"quiz",
+    "criterion":"new variable names",
+    "type":"radio"
+  },
+  "destructuring_10":{
+    "title":"Given:\n  \n`let {a:c=3, b:d=4} = { a: 1 };`\n  \nWhat are the values of the `c` and `d` variables?",
+    "labels":[
+      {"title":"`1` and `4`", "qid":"9527"},
+      {"title":"`3` and `4`", "qid":"9528"},
+      {"title":"`1` and `undefined`", "qid":"9529"}
+    ],
+    "actual":"9527",
+    "category":"quiz",
+    "criterion":"default values",
+    "type":"radio"
+  },
+  "destructuring_11":{
+    "title":"Given:\n  \n``\n  \n``\n  \n``\n  \nWhat ?",
+    "labels":[
+      {"title":"`1` and `2`", "qid":"9530"},
+      {"title":"`2` and `1`", "qid":"9531"},
+      {"title":"`0`", "qid":"9532"}
     ],
     "actual":"9500",
     "category":"quiz",
-    "criterion":"",
+    "criterion":"combined array and object",
     "type":"radio"
   },
   "quiz_results":{

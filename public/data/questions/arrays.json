@@ -818,7 +818,7 @@
     "title":"Where in the target array does the 'push()' method add new items?",
     "labels":[
       {"title":"The *beginning* of the Array", "qid":"1212", "topics":["operation"]},
-      {"title":"The *end* of the Array", "qid":"1213"},
+      {"title":"The *end* of the Array", "qid":"1213"}
     ],
     "actual":"1213",
     "category":"quiz",
@@ -834,7 +834,7 @@
     "title":"Does the Array `push()` method change to original array?",
     "labels":[
       {"title":"Yes. the original array is mutated.", "qid":"1214"},
-      {"title":"No. the original array is left untouched.", "qid":"1215",}
+      {"title":"No. the original array is left untouched.", "qid":"1215"}
     ],
     "actual":"1214",
     "category":"quiz",
@@ -874,5 +874,5 @@
     "title":"JS Array Methods Quiz Summary",
     "type":"summary",
     "qid":"10000"
-  },
+  }
 }

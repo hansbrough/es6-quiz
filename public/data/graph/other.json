@@ -6,7 +6,7 @@
     "title":"JS Fundamental Concepts",
     "topic":"Fundamentals",
     "questions": [
-      {"id":"fundamental_1", "next":"fundamental_2"},
+      {"id":"destructuring_11", "next":"fundamental_2"},
       {"id":"fundamental_2", "next":"fundamental_3"},
       {"id":"fundamental_3", "next":"fundamental_5"},
       {"id":"fundamental_5", "next":"fundamental_6"},
@@ -69,10 +69,14 @@
     "next":"module_final"
   },
   "module_destructuring": {
-    "title":"JS Spread",
-    "topic":"spread",
+    "title":"JS Destructuring",
+    "topic":"destructuring",
     "questions": [
-      {"id":"destructuring_1"}
+      {"id":"destructuring_1", "next":"destructuring_3"},
+      {"id":"destructuring_3", "next":"destructuring_4"},
+      {"id":"destructuring_4", "next":"destructuring_5"},
+      {"id":"destructuring_5", "next":"destructuring_6"},
+      {"id":"destructuring_6"}
     ],
     "next":"module_final"
   },
