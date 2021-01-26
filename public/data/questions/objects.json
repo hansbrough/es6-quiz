@@ -103,7 +103,7 @@
   "object_9":{
     "title":"Given:  \n  \n`let a = {foo:'bar', biz:'baz'}`  \n  \n What does `Object.entries(a)` return?",
     "labels":[
-      {"title":"An iterator that can be used to get to get the Object properties", "qid":"2026", "topics":["return"]},
+      {"title":"An iterator that can be used to get the Object properties", "qid":"2026", "topics":["return"]},
       {"title":"A syntax error because the correct syntax is `a.entries()`", "qid":"2027", "topics":["return"]},
       {"title":"A nested array of property names and values.", "qid":"2028"},
       {"title":"An object containing the property names and values", "qid":"2029", "topics":["return"]}
@@ -196,32 +196,6 @@
     "actual":"2055",
     "category":"quiz",
     "criterion":"values",
-    "type":"radio"
-  },
-  "object_100":{
-    "title":"",
-    "labels":[
-      {"title":"", "qid":"2000"},
-      {"title":"", "qid":"2000"},
-      {"title":"", "qid":"2000"},
-      {"title":"", "qid":"2000"}
-    ],
-    "actual":"2000",
-    "category":"quiz",
-    "criterion":"",
-    "type":"radio"
-  },
-  "object_101":{
-    "title":"",
-    "labels":[
-      {"title":"", "qid":"2000"},
-      {"title":"", "qid":"2000"},
-      {"title":"", "qid":"2000"},
-      {"title":"", "qid":"2000"}
-    ],
-    "actual":"2000",
-    "category":"quiz",
-    "criterion":"",
     "type":"radio"
   },
   "quiz_results":{

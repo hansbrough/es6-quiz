@@ -106,7 +106,7 @@
     "labels":[
       {"title":"Holds key-value pairs and remembers the original insertion order of the keys. ", "qid":"6001","topics":["intent"]},
       {"title":"Stores unique values of any type, whether primitive values or object references.", "qid":"6002","topics":["intent"]},
-      {"title":"Creates a new unique value when called. They can used in place of strings or numbers meant to be unique in a system.", "qid":"6003"},
+      {"title":"Creates a new unique value when called. They can be used in place of strings or numbers meant to be unique in a system.", "qid":"6003"},
       {"title":"Represents the eventual completion (or failure) of an asynchronous operation and its resulting value.", "qid":"6004","topics":["intent"]}
     ],
     "actual":"6003",

@@ -169,7 +169,7 @@
     "type":"radio"
   },
   "array_14":{
-    "title":"Whats the most concise way to check if a `2` exists at the last index of:  \n  \n`const a = [1, 2, 2, 2]`",
+    "title":"Whats the most concise way to check if a `2` exists at the *last* index of:  \n  \n`const a = [1, 2, 2, 2]`",
     "labels":[
       {"title":"`a.indexOf(2)` because the method always searches the entire array.", "qid":"1047", "topics":["operation"]},
       {"title":"`a.findIndex(2, -1)`", "qid":"1048", "topics":["different"], "next":["array_60"]},
@@ -351,7 +351,7 @@
     "type":"radio"
   },
   "array_28":{
-    "title":"Whats the expected value of `a` given `const a = ['a', 'b', 'c', 'd'];  \n  \n `const b = a.slice(1,3)`",
+    "title":"Whats the expected value of `a` given `const a = ['a', 'b', 'c', 'd']`;  \n  \n `const b = a.slice(1,3)`",
     "labels":[
       {"title":"`['a','d']` because `slice()` cuts the elements at indexes `1` and `2`", "qid":"1103", "next":"array_62"},
       {"title":"`['a']` because `slice()` cuts the items at indexes `1` through `3`", "qid":"1104", "topics":["operation"]},
@@ -507,7 +507,7 @@
     "type":"radio"
   },
   "array_40":{
-    "title":"Which array methods can be called on a *string* which is an 'array-like' objects e.g. on a function's arguments",
+    "title":"Which array methods can be called on a *string* (which is an 'array-like' object)",
     "labels":[
       {"title":"`concat`, `every`, `fill`,", "qid":"1149"},
       {"title":"`splice`, `reverse`, `fill`, `map`", "qid":"1150"},
