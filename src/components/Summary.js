@@ -50,7 +50,7 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
 
   // given a question object determine 'advice' to return
   const makeQuestionFollowupAdvice = (question) => {
-    console.log("makeQuestionFollowupAdvice:",question);
+    //console.log("makeQuestionFollowupAdvice:",question);
     let {criterion, moduleTopic} = question;
     const topics = question.labels.find(label => label.qid === question.answerId).topics;
     //console.log("...topics:",topics);

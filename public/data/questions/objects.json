@@ -145,7 +145,7 @@
       {"title":"`false` because `is()` doesn't coerce values and acts like a `===` comparison.", "qid":"2042", "topics":["intent"]},
       {"title":"`false` because `is()` makes sure arguments are the *same* value.", "qid":"2043"}
     ],
-    "actual":"2000",
+    "actual":"2043",
     "category":"quiz",
     "criterion":"is",
     "type":"radio"
