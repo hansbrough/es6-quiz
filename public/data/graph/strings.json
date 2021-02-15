@@ -1,0 +1,39 @@
+{
+  "meta":{
+    "graph_id":"1"
+  },
+  "module_objects":{
+    "title":"JS String Concepts",
+    "topic":"String",
+    "questions": [
+      {"id":"string_1", "next":"string_2"},
+      {"id":"string_2", "next":"string_3"},
+      {"id":"string_3", "next":"string_4"},
+      {"id":"string_4", "next":"string_5"},
+      {"id":"string_5", "next":"string_6"},
+      {"id":"string_6", "next":"string_7"},
+      {"id":"string_7", "next":"string_8"},
+      {"id":"string_8", "next":"string_9"},
+      {"id":"string_9", "next":"string_10"},
+      {"id":"string_10", "next":"string_11"},
+      {"id":"string_11", "next":"string_12"},
+      {"id":"string_12", "next":"string_13"},
+      {"id":"string_13", "next":"string_14"},
+      {"id":"string_14", "next":"string_15"},
+      {"id":"string_15", "next":"string_16"},
+      {"id":"string_16", "next":"string_17"},
+      {"id":"string_17", "next":"string_18"},
+      {"id":"string_18", "next":"string_19"},
+      {"id":"string_19", "next":"string_20"},
+      {"id":"string_20", "next":"string_21"},
+      {"id":"string_21"}
+    ],
+    "next":"module_final"
+  },
+  "module_final":{
+    "title":"What's Next",
+    "questions": [
+      { "id":"quiz_results"}
+    ]
+  }
+}

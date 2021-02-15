@@ -312,7 +312,7 @@
     "type":"radio"
   },
   "array_25":{
-    "title":"Given `const a = [1, 2, 3, 4];`  \n  \n`const b = a.shift()`  \n  \nWhat are the values of `a` and `b`?",
+    "title":"Given `const a = [1, 2, 3, 4];`  \n  \n`const b = a.shift()`  \n  \nWhat are the values of `b` and `a`?",
     "labels":[
       {"title":"`1` and `[2, 3, 4]` because `shift()` mutates the array by removing the first element.", "qid":"1091"},
       {"title":"`1` and `[1, 2, 3, 4]` because shift does *not* mutate the original array.", "qid":"1092","topics":["mutation"]},

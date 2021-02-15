@@ -1,0 +1,262 @@
+{
+  "string_1":{
+    "title":"What does the expression `'cat'[1]` return?",
+    "labels":[
+      {"title":"`cat` since it's the first item.", "qid":"7001"},
+      {"title":"The string `'cat'[1]`", "qid":"7002"},
+      {"title":"A syntax error since this is not a valid expression. The `charAt()` method should be used instead.", "qid":"7003"},
+      {"title":"`a` because strings in javascript can be treated like arrays.", "qid":"7004"}
+    ],
+    "actual":"7004",
+    "category":"quiz",
+    "criterion":"character access",
+    "type":"radio"
+  },
+  "string_2":{
+    "title":"Given `const sentence = 'The quick brown fox.'` what will `sentence.charAt(100)` return?",
+    "labels":[
+      {"title":"`undefined` since the string does not have 100 characters.", "qid":"7006", "topics":["return"]},
+      {"title":"An empty string since the index provided is out of bounds.", "qid":"7007"},
+      {"title":"An 'Out of Bounds' error since the string does not have 100 characters.", "qid":"7008"}
+    ],
+    "actual":"7007",
+    "category":"quiz",
+    "criterion":"charAt",
+    "type":"radio"
+  },
+  "string_3":{
+    "title":"Given `const str1 = 'cat'` `const str2 = 'dog'` What will `str2.concat(', ',str1)` return?",
+    "labels":[
+      {"title":"`dogcat` because the two strings are combine with the `concat` method", "qid":"7009"},
+      {"title":"`dog, cat`", "qid":"7010"},
+      {"title":"`cat, dog` since the three strings are combined.", "qid":"7011"}
+    ],
+    "actual":"7010",
+    "category":"quiz",
+    "criterion":"concat",
+    "type":"radio"
+  },
+  "string_4":{
+    "title":"What will the expression `''.concat('dog','fish','bird')` return?",
+    "labels":[
+      {"title":"`dogfishbird` because concat accepts an unlimited number of arguments.", "qid":"7012"},
+      {"title":"A syntax error. concat doesn't work this way.", "qid":"7013"},
+      {"title":"`' 'dogfishbird` since the empty string is used in the concatenation.", "qid":"7014"}
+    ],
+    "actual":"7012",
+    "category":"quiz",
+    "criterion":"concat",
+    "type":"radio"
+  },
+  "string_5":{
+    "title":"Give `const str1 = 'Cats are the best!'` What will `str1.endsWith('best!', 17)` return?",
+    "labels":[
+      {"title":"`true` because `str1` ends with `best!`", "qid":"7021", "topics":["operation"]},
+      {"title":"`false` because of the optional second argument.", "qid":"7022"},
+      {"title":"The remaining string `Cats are the `", "qid":"7023", "topics":["intent"]}
+    ],
+    "actual":"7022",
+    "category":"quiz",
+    "criterion":"endsWith",
+    "type":"radio"
+  },
+  "string_6":{
+    "title":"Given `const sentence = 'The quick brown fox jumps over the lazy dog.'` What will be returned by `sentence.includes('fox')`?",
+    "labels":[
+      {"title":"`null`", "qid":"7024"},
+      {"title":"`false`", "qid":"7025"},
+      {"title":"`undefined`", "qid":"7026"},
+      {"title":"`true`", "qid":"7027"}
+    ],
+    "actual":"7027",
+    "category":"quiz",
+    "criterion":"includes",
+    "type":"radio"
+  },
+  "string_7":{
+    "title":"Given:  \n  \n `const paragraph = 'The quick brown fox jumps over the lazy dog. The dog barked, was it lazy?'`\n  \n What the result of `paragraph.indexOf('dog')`",
+    "labels":[
+      {"title":"`[40, 49]` because these are the indexes where the string 'dog' appears.", "qid":"7028", "topics":["return"]},
+      {"title":"`40` because only the first index is returned.", "qid":"7029"},
+      {"title":"`[40]` because only the first index is returned.", "qid":"7030", "topics":["return"]},
+      {"title":"`No such method` error is thrown because this is not a valid String method.", "qid":"7031"}
+    ],
+    "actual":"7029",
+    "category":"quiz",
+    "criterion":"indexOf",
+    "type":"radio"
+  },
+  "string_8":{
+    "title":"Given:  \n  \n `const paragraph = 'The quick brown fox jumps over the lazy dog. The dog barked, was it lazy?'`\n  \n What the result of `paragraph.lastIndexOf('dog')`",
+    "labels":[
+      {"title":"`[40, 49]` because these are the indexes where the string 'dog' appears.", "qid":"7032", "topics":["return"]},
+      {"title":"`49` because only the last index is returned.", "qid":"7033"},
+      {"title":"`[49]` because only the last index is returned.", "qid":"7034", "topics":["return"]},
+      {"title":"`[49,50,51]` because these are character indexes where the string 'dog' is located.", "qid":"7035"}
+    ],
+    "actual":"7033",
+    "category":"quiz",
+    "criterion":"lastIndexOf",
+    "type":"radio"
+  },
+  "string_9":{
+    "title":"Given:  \n  \n `const paragraph = 'The quick brown fox jumps over the lazy dog. The dog barked, was it lazy?'`\n  \n What the result of `paragraph.lastIndexOf('cat')`",
+    "labels":[
+      {"title":"`undefined` because the string isn't found.", "qid":"7036", "topics":["return"]},
+      {"title":"`-1` because the string isn't found.", "qid":"7037"},
+      {"title":"`null` because the string isn't found.", "qid":"7038", "topics":["return"]}
+    ],
+    "actual":"7037",
+    "category":"quiz",
+    "criterion":"lastIndexOf",
+    "type":"radio"
+  },
+  "string_10":{
+    "title":"Given:  \n  \n `const paragraph = 'The quick brown fox jumps over the lazy dog.'`\n  \n What the result of `paragraph.match(/dog/)`",
+    "labels":[
+      {"title":"`undefined` because the `match` method expects a string not a regular expression", "qid":"7039"},
+      {"title":"`['dog']` because only the first match is returned", "qid":"7040", "topics":["return"]},
+      {"title":"`[0: 'dog',groups: undefined, index: 40, input:'The quick brown fox jumps over the lazy dog.']`\n  \n because without the 'global' flag additional properties will be returned.", "qid":"7041"}
+    ],
+    "actual":"7041",
+    "category":"quiz",
+    "criterion":"match",
+    "type":"radio"
+  },
+  "string_11":{
+    "title":"Given:  \n  \n `const paragraph = 'The quick brown fox jumps over the lazy dog.'`\n  \n What the result of `paragraph.match(/dog/g)`",
+    "labels":[
+      {"title":"`['dog']` because the match is returned without additional properties when the global flag is used.", "qid":"7042"},
+      {"title":"`[0: 'dog',groups: undefined, index: 40, input:'The quick brown fox jumps over the lazy dog.']`\n  \n ", "qid":"7043", "topics":["return"]},
+      {"title":"Syntax Error because the regular expression is not defined correctly.", "qid":"7044"}
+    ],
+    "actual":"7042",
+    "category":"quiz",
+    "criterion":"match",
+    "type":"radio"
+  },
+  "string_12":{
+    "title":"Given `let paragraph = 'The quick brown fox jumps over the lazy dog. the dog is a good dog'` \n  \n what is the out put of `paragraph.replace(/dog/g, (item) => item+'!')`",
+    "labels":[
+      {"title":"`'The quick brown fox jumps over the lazy dog!. the dog is a good dog'` because only the first match is replaced.", "qid":"7045"},
+      {"title":"Syntax error because the `replace()` method does not accept a callback method as an argument.", "qid":"7046", "topics":["syntax"]},
+      {"title":"`'The quick brown fox jumps over the lazy dog!. the dog! is a good dog!'` because the regex w/global flag results in all matches being replace.", "qid":"7047"}
+    ],
+    "actual":"7047",
+    "category":"quiz",
+    "criterion":"replace",
+    "type":"radio"
+  },
+  "string_13":{
+    "title":"Given `let paragraph = 'The quick brown fox jumps over the lazy dog. the dog is a good dog'` \n  \n what is the output of `paragraph.replace('dog', 'cat')`",
+    "labels":[
+      {"title":"`'The quick brown fox jumps over the lazy cat. the dog is a good dog'` because only the first occurance of pattern will be replaced when using a string.", "qid":"7048"},
+      {"title":"`'The quick brown fox jumps over the lazy cat. the cat is a good cat'` because all occurances of the pattern will be replaced.", "qid":"7049", "topics":["operation"]},
+      {"title":"Syntax error because the `replace()` method requires a regular expression as a pattern - not a string.", "qid":"7050", "topics":["operation"]}
+    ],
+    "actual":"7048",
+    "category":"quiz",
+    "criterion":"replace",
+    "type":"radio"
+  },
+  "string_14":{
+    "title":"Given `let paragraph = 'The quick brown fox jumps over the lazy dog.'` \n  \n what is the value of `paragraph` after `paragraph.replace('dog', 'cat')`",
+    "labels":[
+      {"title":"`'The quick brown fox jumps over the lazy dog.'` because `replace()` does not mutate the original string.", "qid":"7051"},
+      {"title":"`'The quick brown fox jumps over the lazy cat.'` because `replace()` mutates the original string.", "qid":"7052", "topics":["mutation"]}
+    ],
+    "actual":"7051",
+    "category":"quiz",
+    "criterion":"replace",
+    "type":"radio"
+  },
+  "string_15":{
+    "title":"Given `let paragraph = 'The quick brown fox jumps over the lazy dog. the dog is a good dog'` \n  \n What is the output of `paragraph.replaceAll('dog', 'cat')`",
+    "labels":[
+      {"title":"`'The quick brown fox jumps over the lazy dog. the dog is a good dog'` because only the first occurance is replaced when the pattern is a string.", "qid":"7054", "topics":["operation"]},
+      {"title":"`'The quick brown fox jumps over the lazy cat. the cat is a good cat'` because all occurances are replaced even if the pattern is a string.", "qid":"7055"},
+      {"title":"Syntax error because the `replaceAll()` method requires a regular expression as a pattern - not a string.", "qid":"7056", "topics":["operation"]}
+    ],
+    "actual":"7055",
+    "category":"quiz",
+    "criterion":"replaceAll",
+    "type":"radio"
+  },
+  "string_16":{
+    "title":"Given `const p = 'Exploring the zoo, we saw every kangaroo jump and quite a few carried kangaroo babies'` \n  \n what is the return value of `p.search(/kangaroo/)`?",
+    "labels":[
+      {"title":"`['kangaroo','kangaroo']` because two instances of the pattern were found.", "qid":"7057"},
+      {"title":"`[32,69]` because these are the indexes where the pattern is found in the string.", "qid":"7058", "topics":["syntax"]},
+      {"title":"`32` because it is the index of the first instance of the search pattern.", "qid":"7059"}
+    ],
+    "actual":"7059",
+    "category":"quiz",
+    "criterion":"search",
+    "type":"radio"
+  },
+  "string_17":{
+    "title":"Given `const p = 'Pack my box with five dozen liquor jugs.'` \n  \n What is the return value of `p.slice(17)`?",
+    "labels":[
+      {"title":"`'five dozen liquor jugs.'` because `slice` returns a new string starting at index 17 of the original string.", "qid":"7060"},
+      {"title":"`'Pack my box with five dozen liquor jugs.'` because slice does not mutate the original string.", "qid":"7061", "topics":["return"]},
+      {"title":"`'f'` because slice returns the character at index 17", "qid":"7062"}
+    ],
+    "actual":"7060",
+    "category":"quiz",
+    "criterion":"slice",
+    "type":"radio"
+  },
+  "string_18":{
+    "title":"Given `const p = 'Pack my box with five dozen liquor jugs.'` \n  \n What is the return value of `p.slice(17,21)`?",
+    "labels":[
+      {"title":"`'Pack my box with five dozen liquor jugs.'` because slice does not mutate the original string.", "qid":"7063", "topics":["return"]},
+      {"title":"`'five'` because `slice` returns the characters between the start and end indexes", "qid":"7064"},
+      {"title":"`'Pack my box with  dozen liquor jugs.'` because the `slice` method removes the characters between the start and end indexes.", "qid":"7065", "topics":["intent"]}
+    ],
+    "actual":"7064",
+    "category":"quiz",
+    "criterion":"slice",
+    "type":"radio"
+  },
+  "string_19":{
+    "title":"Given `const p = 'Pack my box with five dozen liquor jugs.'` \n  \n What is the value of `p` after `p.slice(17)`?",
+    "labels":[
+      {"title":"`'Pack my box with '` because `slice` has removed all characters beginning index 17", "qid":"7066", "topics":["mutation"]},
+      {"title":"`'Pack my box with five dozen liquor jugs.'` because `slice` does not mutate the original string.", "qid":"7067"}
+    ],
+    "actual":"7067",
+    "category":"quiz",
+    "criterion":"slice",
+    "type":"radio"
+  },
+  "string_20":{
+    "title":"Given `const p = 'The wizard quickly jinxed the gnomes.'` \n  \n What is the return value of `p.split(' ')`",
+    "labels":[
+      {"title":"`['The wizard quickly jinxed the gnomes.']` because no pattern was supplied to the `split` method.", "qid":"7068", "topics":["syntax"]},
+      {"title":"`['The','wizard','quickly','jinxed','the','gnomes']` because split returns an array by breaking apart a string based on a pattern.", "qid":"7069"},
+      {"title":"`['The',' ','wizard',' ','quickly',' ','jinxed',' ','the',' ','gnomes']` because no pattern was supplied to the `split` method.", "qid":"7070"}
+    ],
+    "actual":"7069",
+    "category":"quiz",
+    "criterion":"split",
+    "type":"radio"
+  },
+  "string_21":{
+    "title":"Given `const txt = 'Exploring the zoo'` \n  \n What is the return value of `txt.substring(-6, 2)`?",
+    "labels":[
+      {"title":"`'he'` because negative numbers start counting from the end of the array.", "qid":"7070", "topics":["operation"]},
+      {"title":"`'Ex'` because the `substring` method converts negative numbers to 0", "qid":"7071"},
+      {"title":"`undefined` because starting from an index of -6 selects an out of bounds position.", "qid":"7072"}
+    ],
+    "actual":"7071",
+    "category":"quiz",
+    "criterion":"substring",
+    "type":"radio"
+  },
+  "quiz_results":{
+    "title":"Js Strings Quiz Summary",
+    "type":"summary",
+    "qid":"10000"
+  }
+
+}

@@ -6,7 +6,7 @@ const Home = () => {
     <main>
       <h2>Overview</h2>
       <p>
-        Here's some basic es6 questions to quiz your knowledge and determine what areas require some "brushing up".
+        Here's some basic es6+ syntax questions to quiz your knowledge and determine what areas require some "brushing up".
         These are not questions that ask you to program but rather are meant jog your memory.
       </p>
       <p>

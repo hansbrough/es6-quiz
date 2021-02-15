@@ -9,6 +9,7 @@ import SetsQuiz from "./components/setsQuiz";
 import SymbolsQuiz from "./components/symbolsQuiz";
 import FundamentalsQuiz from "./components/fundamentalsQuiz";
 import OthersQuiz from "./components/othersQuiz";
+import StringsQuiz from "./components/StringsQuiz";
 
 /*--Styles--*/
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
           <NavLink exact to="/" activeClassName="active">Overview</NavLink>
           <NavLink exact to="/arrays" activeClassName="active">Arrays</NavLink>
           <NavLink exact to="/objects" activeClassName="active">Objects</NavLink>
+          <NavLink exact to="/strings" activeClassName="active">Strings</NavLink>
           <NavLink exact to="/maps" activeClassName="active">Maps</NavLink>
           <NavLink exact to="/sets" activeClassName="active">Sets</NavLink>
           <NavLink exact to="/other" activeClassName="active">Other</NavLink>
@@ -37,6 +39,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/arrays" component={ArraysQuiz} />
             <Route exact path="/objects" component={ObjectsQuiz} />
+            <Route exact path="/strings" component={StringsQuiz} />
             <Route exact path="/maps" component={MapsQuiz} />
             <Route exact path="/sets" component={SetsQuiz} />
             <Route exact path="/symbols" component={SymbolsQuiz} />

@@ -84,7 +84,7 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
           description = `The syntax to call a built-in object's method generically is: [built in object name].prototype.[method name].call([this ref], args)`;
           break;
         case 'hardwired':
-          description = `The solution isn't reuasable because it has a hard wired value.`
+          description = `The solution isn't reusable because it has a hard wired value.`
           break;
         case 'hoisting':
           description = 'Be sure to understand the concept of hoisting and how it differs between the  "var", "let" and "const" keywords.'
@@ -168,7 +168,6 @@ const Summary = ({correctResponses, inCorrectResponses}) => {
   }
 
   const criteria = unique([{incorrect: inCorrectResponses}, {correct: correctResponses}]);
-  //console.log("...criteria:",criteria);
 
   return (
     <>
